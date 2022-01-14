@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <!-- 配置动画属性 -->
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@+id/start"
+        motion:duration="1000">
+        <!-- 触摸属性 -->
+        <OnSwipe
+            motion:dragDirection="dragDown"
+            motion:touchAnchorId="@+id/button"
+            motion:touchAnchorSide="bottom" />
+    </Transition>
+
+    <!-- 是定义描述您的运动的各种限制条件的位置 -->
+    <!-- 开始的View限制 -->
+    <ConstraintSet android:id="@+id/start">
+        <!-- 条件限制 -->
+        <Constraint
+            android:id="@+id/button"
+            android:layout_width="200dp"
+            android:layout_height="64dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent">
+             <!--  自定义条件限制,backgroundColor:方法名,customColorValue:参数类型 并且必须与具有
+             getter 和 setter 方法的对象匹配-->
+            <!-- 设置背景色 -->
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="#D81B60" />
+            <!--           设置文字-->
+            <CustomAttribute
+                motion:attributeName="text"
+                motion:customStringValue="开始" />
+        </Constraint>
+    </ConstraintSet>
+
+    <!-- 结束的View限制  -->
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/button"
+            android:layout_width="200dp"
+            android:layout_height="64dp"
+            android:layout_marginBottom="8dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent">
+
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="#9999FF" />
+            <CustomAttribute
+                motion:attributeName="text"
+                motion:customStringValue="结束" />
+        </Constraint>
+    </ConstraintSet>
+
+</MotionScene>
+        
