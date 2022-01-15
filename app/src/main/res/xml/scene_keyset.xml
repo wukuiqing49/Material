@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  Copyright (C) 2018 The Android Open Source Project
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@+id/start"
+        motion:duration="1000"
+        motion:motionInterpolator="linear">
+        <!--  motion:pathMotionArc="startHorizontal"-->
+        <!-- motionInterpolator 动画插值器 -->
+        <!-- autoCompleteToEnd 自动完成到结尾  autoComplete自动完成 -->
+        <OnSwipe
+            motion:dragDirection="dragRight"
+            motion:touchAnchorId="@+id/button"
+            motion:touchAnchorSide="right" />
+        <!--parentRelative 相对父布局的路径  相对控件的-->
+        <!--percentY 移动的Y位置(百分比+在下 -在上)-->
+        <!--percentX 移动的Y位置(百分比+在右边 -在左边)-->
+        <!--motionTarget 目标View-->
+        <!--framePosition 0=起点100=终点 什么时候关键帧起作用-->
+        <KeyFrameSet>
+            <KeyPosition
+                motion:framePosition="30"
+                motion:keyPositionType="pathRelative"
+                motion:motionTarget="@id/button"
+                motion:percentX="0.5"
+                motion:percentY="-0.5" />
+
+            <!-- KeyAttribute 关键帧的属性-->
+            <!--   scaleX    scaleY XY 缩放      -->
+            <!--   rotation    旋转      -->
+            <!--   framePosition    执行到这个区间的百分之80      -->
+            <KeyAttribute
+                android:rotation="45"
+                android:scaleX="2"
+                android:scaleY="2"
+                motion:framePosition="80"
+                motion:motionTarget="@id/button" />
+
+            <KeyPosition
+                motion:framePosition="60"
+                motion:keyPositionType="pathRelative"
+                motion:motionTarget="@id/button"
+                motion:percentX="0.7"
+                motion:percentY="-0.8" />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@id/button"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                motion:attributeName="BackgroundColor"
+                motion:customColorValue="#D81B60" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@id/button"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="8dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                motion:attributeName="BackgroundColor"
+                motion:customColorValue="#9999FF" />
+        </Constraint>
+    </ConstraintSet>
+
+</MotionScene>

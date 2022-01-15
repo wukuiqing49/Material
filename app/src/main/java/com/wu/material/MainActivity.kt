@@ -12,5 +12,13 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.bt_badge).setOnClickListener {
             startActivity(Intent(this,MothionLayoutDemo1Activity::class.java));
         }
+
+        findViewById<Button>(R.id.bt_image_filter).setOnClickListener {
+            startActivity(Intent(this,MothionImageFilterViewActivity::class.java));
+        }
+        findViewById<Button>(R.id.bt_Keyset).setOnClickListener {
+            startActivity(Intent(this,MothionKeysetActivity::class.java));
+        }
     }
+
 }
