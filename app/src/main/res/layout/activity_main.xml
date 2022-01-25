@@ -27,4 +27,11 @@
         android:layout_height="wrap_content"
         android:text="MothionLayout_Keyset_学习" />
 
+    <Button
+        android:id="@+id/bt_coor"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MothionLayout_CoordinatorLayout_学习" />
+
 </LinearLayout>

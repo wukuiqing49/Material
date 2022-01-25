@@ -30,7 +30,7 @@ class MaterialBadgeDrawableActivity :AppCompatActivity() {
        var rl= findViewById<FrameLayout>(R.id.rl)
        var db= BadgeDrawable.create(this).apply {
            number=11
-           badgeTextColor=resources.getColor(R.color.black)
+           badgeTextColor=resources.getColor(R.color.white)
            badgeGravity=BadgeDrawable.TOP_END}
         tvContent.post {
             BadgeUtils.attachBadgeDrawable(db,tvContent,rl)

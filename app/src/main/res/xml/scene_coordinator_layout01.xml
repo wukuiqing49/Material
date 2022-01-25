@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@+id/start"
+        motion:motionInterpolator="linear"></Transition>
+
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/backgroundIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="1.0"
+            motion:layout_constraintBottom_toBottomOf="parent">
+
+        </Constraint>
+        <Constraint
+            android:layout_marginLeft="20dp"
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="-90.0"
+            android:layout_marginStart="18dp"
+            android:layout_marginBottom="18dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/backgroundIcon"
+            motion:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@id/backgroundIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.2"
+            motion:layout_constraintBottom_toBottomOf="parent"></Constraint>
+        <Constraint
+
+            android:id="@id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginBottom="18dp"
+            android:rotation="0.0"
+            motion:layout_constraintBottom_toBottomOf="@+id/backgroundIcon"
+            motion:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+
+
+</MotionScene>

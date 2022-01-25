@@ -11,7 +11,7 @@
         <OnSwipe
             motion:dragDirection="dragDown"
             motion:touchAnchorId="@+id/button"
-            motion:onTouchUp="stop"
+            motion:onTouchUp="autoComplete"
             motion:touchAnchorSide="bottom" />
     </Transition>
 

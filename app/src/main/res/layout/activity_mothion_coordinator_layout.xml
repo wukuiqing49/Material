@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="false">
+
+    <!-- 顶部布局   -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_layout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <!--      minHeight: 最小高度  -->
+        <!--      background: 背景色  -->
+        <!--      layoutDescription : 配置文件-->
+        <androidx.constraintlayout.motion.widget.MotionLayout
+
+            android:id="@+id/ml"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            android:fitsSystemWindows="false"
+            android:minHeight="60dp"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layoutDescription="@xml/scene_coordinator_layout01"
+            app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed"
+            tools:ignore="MotionLayoutInvalidSceneFileReference">
+
+            <ImageView
+                android:id="@+id/backgroundIcon"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/roard" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试文字,旋转了90°"
+                android:textColor="#FFF"
+                android:textSize="16dp"
+                android:transformPivotX="0dp"
+                android:transformPivotY="0dp" />
+
+        </androidx.constraintlayout.motion.widget.MotionLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <!-- 移动的控件 -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/large_text" />
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

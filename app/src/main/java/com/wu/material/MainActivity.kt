@@ -19,6 +19,9 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.bt_Keyset).setOnClickListener {
             startActivity(Intent(this,MothionKeysetActivity::class.java));
         }
+        findViewById<Button>(R.id.bt_coor).setOnClickListener {
+            startActivity(Intent(this,CoordinatorLayoutActivity::class.java));
+        }
     }
 
 }
