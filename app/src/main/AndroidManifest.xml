@@ -21,6 +21,7 @@
         <activity android:name=".MothionImageFilterViewActivity"/>
         <activity android:name=".MothionKeysetActivity"/>
         <activity android:name=".CoordinatorLayoutActivity"/>
+        <activity android:name=".CoordinatorLayout2Activity"/>
     </application>
 
 </manifest>

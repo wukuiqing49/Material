@@ -22,6 +22,9 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.bt_coor).setOnClickListener {
             startActivity(Intent(this,CoordinatorLayoutActivity::class.java));
         }
+        findViewById<Button>(R.id.bt_coor2).setOnClickListener {
+            startActivity(Intent(this,CoordinatorLayout2Activity::class.java));
+        }
     }
 
 }
