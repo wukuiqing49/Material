@@ -14,6 +14,8 @@
             android:id="@+id/backgroundIcon"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:scaleX="1.1"
+            android:scaleY="1.1"
             android:alpha="1.0" />
 
         <Constraint
@@ -49,6 +51,8 @@
             android:id="@id/backgroundIcon"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:translationY="100dp"
+            android:translationX="0dp"
             android:alpha="0.2" />
         <!-- 文字靠左展示 -->
         <Constraint
