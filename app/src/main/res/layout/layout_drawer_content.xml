@@ -6,5 +6,12 @@
     app:layoutDescription="@xml/scene_12_content">
 
     <include layout="@layout/layout_mothion_coordinator_layout" />
+    <ImageView
+
+        android:id="@+id/fab"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/roard2" />
 
 </com.wu.material.DrawerContent>
