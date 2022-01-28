@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="false">
+
+    <!-- 顶部布局   -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="180dp">
+
+        <!--      minHeight: 最小高度  -->
+        <!--      background: 背景色  -->
+        <!--      layoutDescription : 配置文件-->
+        <com.wu.material.CollapsibleToolbar
+
+            android:id="@+id/ml"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            android:fitsSystemWindows="false"
+            android:minHeight="40dp"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:layoutDescription="@xml/scene_coordinator_layout02"
+            app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed"
+            tools:ignore="MotionLayoutInvalidSceneFileReference">
+
+
+            <ImageView
+                android:id="@+id/backgroundIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/sea" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户名"
+                android:textColor="#FFF"
+                android:textSize="16dp" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/icon"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@mipmap/roard"
+                app:shapeAppearanceOverlay="@style/circleImageStyle" />
+
+
+        </com.wu.material.CollapsibleToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <!-- 移动的控件 -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/large_text" />
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

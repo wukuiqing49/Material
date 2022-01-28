@@ -40,4 +40,17 @@
         android:layout_height="wrap_content"
         android:text="个人博客页面效果2" />
 
+    <Button
+        android:id="@+id/bt_coor3"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="侧滑效果搭配1" />
+    <Button
+        android:id="@+id/bt_coor4"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="侧滑效果搭配2" />
+
 </LinearLayout>

@@ -22,6 +22,8 @@
         <activity android:name=".MothionKeysetActivity"/>
         <activity android:name=".CoordinatorLayoutActivity"/>
         <activity android:name=".CoordinatorLayout2Activity"/>
+        <activity android:name=".SidePanelActivity"/>
+        <activity android:name=".DrawerLayoutActivity"/>
     </application>
 
 </manifest>
