@@ -11,7 +11,7 @@ import com.google.android.material.appbar.AppBarLayout
  *
  * @date 2022年01月24日 13:56
  *
- *@des  侧滑效果
+ *@des  侧滑效果(未处理 仅仅能展示顶部动画效果)
  *
  */
 
