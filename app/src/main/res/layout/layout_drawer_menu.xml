@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.wu.material.DrawerContent xmlns:android="http://schemas.android.com/apk/res/android"
+<com.wu.material.widget.DrawerContent xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/menu"
     android:layout_width="180dp"
@@ -22,4 +22,4 @@
 
 
 
-</com.wu.material.DrawerContent>
+</com.wu.material.widget.DrawerContent>

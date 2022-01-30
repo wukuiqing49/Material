@@ -18,7 +18,7 @@
         <!--      minHeight: 最小高度  -->
         <!--      background: 背景色  -->
         <!--      layoutDescription : 配置文件-->
-        <com.wu.material.CollapsibleToolbar
+        <com.wu.material.widget.CollapsibleToolbar
 
             android:id="@+id/ml"
             android:layout_width="match_parent"
@@ -55,7 +55,7 @@
                 app:shapeAppearanceOverlay="@style/circleImageStyle" />
 
 
-        </com.wu.material.CollapsibleToolbar>
+        </com.wu.material.widget.CollapsibleToolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
     <!-- 移动的控件 -->

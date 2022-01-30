@@ -1,9 +1,10 @@
-package com.wu.material
+package com.wu.material.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.wu.material.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +32,9 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.bt_coor4).setOnClickListener {
             startActivity(Intent(this, SidePanelActivity::class.java));
+        }
+        findViewById<Button>(R.id.bt_coor5).setOnClickListener {
+            startActivity(Intent(this, ViewPagerActivity::class.java));
         }
     }
 

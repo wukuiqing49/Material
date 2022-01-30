@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.wu.material
+package com.wu.material.widget
 
 import android.content.Context
 import android.util.AttributeSet

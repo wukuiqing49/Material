@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+    <!-- 控制动画属性  duration时间  motionInterpolator 动画插值器  constraintSetStart和constraintSetEnd  开始和技术的的ConstraintSet -->
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@+id/start">
+
+        <!-- 动画中的关键点-->
+
+        <KeyFrameSet>
+
+
+            <KeyPosition
+                motion:framePosition="25"
+                motion:keyPositionType="parentRelative"
+                motion:motionTarget="@+id/textView"
+                motion:percentY=".6" />
+
+            <KeyAttribute
+                android:rotation="-10"
+                motion:framePosition="25"
+                motion:motionTarget="@+id/textView" />
+
+
+            <KeyPosition
+                motion:framePosition="50"
+                motion:keyPositionType="parentRelative"
+                motion:motionTarget="@+id/textView"
+                motion:percentY=".8" />
+
+            <KeyAttribute
+                android:rotation="20"
+                motion:framePosition="50"
+                motion:motionTarget="@+id/textView" />
+
+            <KeyPosition
+                motion:framePosition="75"
+                motion:keyPositionType="parentRelative"
+                motion:motionTarget="@+id/textView"
+                motion:percentY=".9" />
+
+            <KeyAttribute
+                android:rotation="-20"
+                motion:framePosition="75"
+                motion:motionTarget="@+id/textView" />
+
+
+        </KeyFrameSet>
+    </Transition>
+
+    <!--    配置开始时控件的位置  控件通过id 属性关联布局中的属性-->
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleX="1.2"
+            android:scaleY="1.2" />
+        <Constraint
+            android:id="@id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintLeft_toLeftOf="parent" />
+
+    </ConstraintSet>
+    <!--    配置结束时控件的位置  控件通过id 属性关联布局中的属性-->
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleX="1.2"
+            android:scaleY="1.2" />
+
+        <Constraint
+            android:id="@id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+    </ConstraintSet>
+</MotionScene>

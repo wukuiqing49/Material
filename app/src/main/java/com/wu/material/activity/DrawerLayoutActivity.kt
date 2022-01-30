@@ -1,10 +1,9 @@
-package com.wu.material
+package com.wu.material.activity
 
 import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.motion.widget.MotionLayout
-import com.google.android.material.appbar.AppBarLayout
+import com.wu.material.R
 
 /**
  * @author wkq

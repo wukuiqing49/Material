@@ -1,15 +1,10 @@
-package com.wu.material
+package com.wu.material.activity
 
 import android.annotation.SuppressLint
-import android.graphics.Rect
 import android.os.Bundle
-import android.widget.FrameLayout
-import android.widget.RelativeLayout
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.motion.widget.MotionLayout
-import com.google.android.material.badge.BadgeDrawable
-import com.google.android.material.badge.BadgeUtils
+import com.wu.material.R
 
 
 /**
@@ -21,12 +16,12 @@ import com.google.android.material.badge.BadgeUtils
  *
  */
 
-class MothionImageFilterViewActivity :AppCompatActivity() {
+class MothionKeysetActivity :AppCompatActivity() {
 
     @SuppressLint("RestrictedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mothion_image_filter)
+        setContentView(R.layout.activity_mothion_keysetl)
 
         setShowLines()
     }

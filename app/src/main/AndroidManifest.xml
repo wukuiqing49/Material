@@ -9,21 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MaterialBadgeDrawableActivity"/>
-        <activity android:name=".MothionLayoutDemo1Activity"/>
-        <activity android:name=".MothionImageFilterViewActivity"/>
-        <activity android:name=".MothionKeysetActivity"/>
-        <activity android:name=".CoordinatorLayoutActivity"/>
-        <activity android:name=".CoordinatorLayout2Activity"/>
-        <activity android:name=".SidePanelActivity"/>
-        <activity android:name=".DrawerLayoutActivity"/>
+        <activity android:name=".activity.MaterialBadgeDrawableActivity"/>
+        <activity android:name=".activity.MothionLayoutDemo1Activity"/>
+        <activity android:name=".activity.MothionImageFilterViewActivity"/>
+        <activity android:name=".activity.MothionKeysetActivity"/>
+        <activity android:name=".activity.CoordinatorLayoutActivity"/>
+        <activity android:name=".activity.CoordinatorLayout2Activity"/>
+        <activity android:name=".activity.SidePanelActivity"/>
+        <activity android:name=".activity.DrawerLayoutActivity"/>
+        <activity android:name=".activity.ViewPagerActivity"/>
     </application>
 
 </manifest>
