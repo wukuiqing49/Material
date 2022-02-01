@@ -5,12 +5,11 @@
     <Transition
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@+id/start">
-
-        <!-- 动画中的关键点-->
-
+        <!-- 动画中的关键点  25  50  75   注意配置旋转角度-->
+        <!-- percentY关键点位置属性 位置为父布局的相对百分比位置 -->
+        <!-- parentRelative 关键点类型 此类型是父布局的相对位置-->
         <KeyFrameSet>
-
-
+            <!--关键点1-->
             <KeyPosition
                 motion:framePosition="25"
                 motion:keyPositionType="parentRelative"
@@ -22,7 +21,7 @@
                 motion:framePosition="25"
                 motion:motionTarget="@+id/textView" />
 
-
+            <!--关键点2-->
             <KeyPosition
                 motion:framePosition="50"
                 motion:keyPositionType="parentRelative"
@@ -30,10 +29,10 @@
                 motion:percentY=".8" />
 
             <KeyAttribute
-                android:rotation="20"
+                android:rotation="40"
                 motion:framePosition="50"
                 motion:motionTarget="@+id/textView" />
-
+            <!--关键点3-->
             <KeyPosition
                 motion:framePosition="75"
                 motion:keyPositionType="parentRelative"
@@ -41,23 +40,22 @@
                 motion:percentY=".9" />
 
             <KeyAttribute
-                android:rotation="-20"
+                android:rotation="-10"
                 motion:framePosition="75"
                 motion:motionTarget="@+id/textView" />
-
-
         </KeyFrameSet>
     </Transition>
 
     <!--    配置开始时控件的位置  控件通过id 属性关联布局中的属性-->
     <ConstraintSet android:id="@+id/start">
-
+        <!--  放大平移效果 scaleX 缩放  translationX 横向移动-->
         <Constraint
             android:id="@+id/background"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleX="1.2"
-            android:scaleY="1.2" />
+            android:scaleY="1.2"
+            android:translationX="-10dp" />
         <Constraint
             android:id="@id/textView"
             android:layout_width="wrap_content"
@@ -76,7 +74,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleX="1.2"
-            android:scaleY="1.2" />
+            android:scaleY="1.2"
+            android:translationX="10dp" />
 
         <Constraint
             android:id="@id/textView"

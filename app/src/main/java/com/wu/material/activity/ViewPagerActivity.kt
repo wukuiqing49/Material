@@ -51,15 +51,11 @@ class ViewPagerActivity : AppCompatActivity() {
             }
 
             override fun onPageSelected(position: Int) {
-
             }
 
             override fun onPageScrollStateChanged(state: Int) {
-
             }
         })
-
     }
-
 
 }

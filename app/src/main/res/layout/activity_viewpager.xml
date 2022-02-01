@@ -1,45 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <androidx.constraintlayout.motion.widget.MotionLayout
-        android:id="@+id/motion_layout"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        app:layoutDescription="@xml/scene_viewpager_top"
-        android:layout_height="200dp">
-
-        <ImageView
-            android:id="@+id/background"
+        android:layout_height="wrap_content">
+        <!-- 顶部布局  配置layout_scrollFlags="scroll|exitUntilCollapsed 实现吸顶-->
+        <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/monterey"
-            android:scaleType="centerCrop" />
+            android:layout_height="200dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <!-- 顶部布局以及顶部背景图滑动小飞机滑动效果 -->
+            <androidx.constraintlayout.motion.widget.MotionLayout
+                android:id="@+id/motion_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutDescription="@xml/scene_viewpager_top">
 
-        <ImageView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
+                <ImageView
+                    android:id="@+id/background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/monterey" />
+
+                <ImageView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/iv_fly" />
+
+            </androidx.constraintlayout.motion.widget.MotionLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        <!-- tab布局 -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@mipmap/iv_fly"
-       />
+            android:background="@color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-    </androidx.constraintlayout.motion.widget.MotionLayout>
-
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
-
-
+    <!-- 底部页面布局布局(vp中fragment 必须嵌套滑动布局) -->
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 
-</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
