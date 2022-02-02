@@ -36,6 +36,9 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.bt_coor5).setOnClickListener {
             startActivity(Intent(this, ViewPagerActivity::class.java));
         }
+        findViewById<Button>(R.id.bt_coor6).setOnClickListener {
+            startActivity(Intent(this, SearchLayoutActivity::class.java));
+        }
     }
 
 }

@@ -25,6 +25,7 @@
         <activity android:name=".activity.SidePanelActivity"/>
         <activity android:name=".activity.DrawerLayoutActivity"/>
         <activity android:name=".activity.ViewPagerActivity"/>
+        <activity android:name=".activity.SearchLayoutActivity"/>
     </application>
 
 </manifest>
