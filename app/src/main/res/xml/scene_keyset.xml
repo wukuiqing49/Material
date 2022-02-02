@@ -22,9 +22,11 @@
         <!--framePosition 0=起点100=终点 什么时候关键帧起作用-->
         <KeyFrameSet>
             <KeyPosition
+                motion:transitionEasing="accelerate"
                 motion:framePosition="50"
                 motion:keyPositionType="pathRelative"
                 motion:motionTarget="@id/button"
+                motion:pathMotionArc="none"
                 motion:percentX="0.5"
                 motion:percentY="-0.5" />
 
