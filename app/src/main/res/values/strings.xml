@@ -90,7 +90,29 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
 
-    <string name="rocket_emoji">🚀</string>
+
+    <string name="view_pager">View Pager</string>
+    <string name="entrance">Entrance</string>
+    <string name="toolbar">Toolbar</string>
+    <string name="entrance_secondary_text">Display a complex entrance animation when entering a screen</string>
+    <string name="view">View</string>
+    <string name="toolbar_secondary_text">Display a complex collapsing toolbar with insets</string>
+    <string name="star_background_content_description">Star background</string>
+    <string name="prepare_to_launch">launch</string>
+    <string name="ringed_planet">Ringed Planet</string>
+    <string name="added_in_2019_in_unicode_12_0">Added in 2019 in Unicode 12.0</string>
     <string name="ringed_planet_emoji">🪐</string>
+    <string name="spacemoji">Spacemoji</string>
+    <string name="quick_access_to_space_themed_emoji">Quick access to space themed emoji</string>
+    <string name="rocket_emoji">🚀</string>
+    <string name="rocket">Rocket</string>
+    <string name="added_in_2010_in_unicode_6_0">Added in 2010 in Unicode 6.0</string>
     <string name="space_moster_emoji">👾</string>
+    <string name="space_monster">Space Monster</string>
+    <string name="view_pager_text">View Pager</string>
+    <string name="pager_secondary_text">Display a dynamic header driven by a ViewPager</string>
+    <string name="view_pager_sample_preview">View pager sample preview</string>
+    <string name="entrace_sample_preview">Entrace sample preview</string>
+    <string name="collapsing_toolbar_screen_preview">Collapsing toolbar screen preview</string>
+    <string name="star_background">star background</string>
 </resources>

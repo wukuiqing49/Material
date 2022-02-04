@@ -26,6 +26,7 @@
         <activity android:name=".activity.DrawerLayoutActivity"/>
         <activity android:name=".activity.ViewPagerActivity"/>
         <activity android:name=".activity.SearchLayoutActivity"/>
+        <activity android:name=".activity.EntranceActivity"/>
     </application>
 
 </manifest>

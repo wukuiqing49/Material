@@ -64,6 +64,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SearchLayoutActivity 效果" />
+    <Button
+        android:id="@+id/bt_coor7"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="启动 效果" />
 
 
 </LinearLayout>

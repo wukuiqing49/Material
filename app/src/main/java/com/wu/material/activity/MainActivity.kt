@@ -39,6 +39,10 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.bt_coor6).setOnClickListener {
             startActivity(Intent(this, SearchLayoutActivity::class.java));
         }
+
+        findViewById<Button>(R.id.bt_coor7).setOnClickListener {
+            startActivity(Intent(this, EntranceActivity::class.java));
+        }
     }
 
 }
