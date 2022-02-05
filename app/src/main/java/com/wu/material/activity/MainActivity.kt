@@ -46,6 +46,9 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.bt_coor8).setOnClickListener {
             startActivity(Intent(this, CarouselActivity::class.java));
         }
+        findViewById<Button>(R.id.bt_coor9).setOnClickListener {
+            startActivity(Intent(this, Carousel2Activity::class.java));
+        }
     }
 
 }

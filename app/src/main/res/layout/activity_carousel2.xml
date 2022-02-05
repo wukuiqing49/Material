@@ -7,7 +7,7 @@
         android:id="@+id/motionLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layoutDescription="@xml/scene_carousel">
+        app:layoutDescription="@xml/scene_carousel2">
 
 
         <ImageView
@@ -94,14 +94,5 @@
             app:carousel_previousState="@id/previous"
             app:constraint_referenced_ids="left,show_left,center,show_right,right" />
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="36dp"
-            android:text="下一个"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.motion.widget.MotionLayout>
 </layout>

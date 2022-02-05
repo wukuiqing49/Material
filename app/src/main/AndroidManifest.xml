@@ -27,6 +27,7 @@
         <activity android:name=".activity.SearchLayoutActivity"/>
         <activity android:name=".activity.EntranceActivity"/>
         <activity android:name=".activity.CarouselActivity"/>
+        <activity android:name=".activity.Carousel2Activity"/>
     </application>
 
 </manifest>
