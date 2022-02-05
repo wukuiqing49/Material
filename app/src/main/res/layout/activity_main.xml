@@ -15,6 +15,21 @@
             android:orientation="vertical">
 
             <Button
+                android:id="@+id/bt_coor8"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="轮播效果 效果" />
+            <Button
+                android:id="@+id/bt_coor9"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="轮播效果2 效果" />
+
+
+
+            <Button
                 android:id="@+id/bt_badge"
                 android:layout_marginTop="20dp"
                 android:layout_width="200dp"
@@ -77,18 +92,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="启动 效果" />
-            <Button
-                android:id="@+id/bt_coor8"
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="轮播效果 效果" />
-            <Button
-                android:id="@+id/bt_coor9"
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="轮播效果2 效果" />
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
