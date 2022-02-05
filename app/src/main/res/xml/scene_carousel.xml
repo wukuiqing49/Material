@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <!-- 配置动画属性 -->
+    <Transition
+        android:id="@+id/forward"
+        motion:constraintSetEnd="@+id/next"
+        motion:constraintSetStart="@+id/start">
+        <!-- 触摸属性  onTouchUp   stop  不自动滑动-->
+        <OnSwipe
+            motion:dragDirection="dragLeft"
+            motion:touchAnchorSide="left" />
+    </Transition>
+    <!-- 配置动画属性 -->
+    <Transition
+        android:id="@+id/backward"
+        motion:constraintSetEnd="@+id/previous"
+        motion:constraintSetStart="@+id/start">
+        <OnSwipe
+            motion:dragDirection="dragRight"
+            motion:touchAnchorSide="right" />
+    </Transition>
+    <!--     开始的-->
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/show_left"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="18dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toStartOf="@+id/center"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+
+            android:id="@+id/center"
+            android:layout_width="200dp"
+            android:layout_height="600dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="18dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/show_right"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="20dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/center"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+
+    </ConstraintSet>
+
+    <!--    以后的-->
+    <ConstraintSet android:id="@+id/next">
+
+        <Constraint
+
+            android:id="@+id/center"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="18dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+
+            android:id="@+id/show_right"
+            android:layout_width="200dp"
+            android:layout_height="600dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="20dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/center"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/right"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="20dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/show_right"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+    </ConstraintSet>
+
+
+    <!--    以前的-->
+    <ConstraintSet android:id="@+id/previous">
+
+
+        <Constraint
+            android:id="@+id/show_left"
+            android:layout_width="200dp"
+            android:layout_height="600dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="18dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toStartOf="@+id/center"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+
+            android:id="@+id/center"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="18dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/show_right"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="20dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/center"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+
+    </ConstraintSet>
+
+
+</MotionScene>
+        

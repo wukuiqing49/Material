@@ -16,7 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.MaterialBadgeDrawableActivity"/>
         <activity android:name=".activity.MothionLayoutDemo1Activity"/>
         <activity android:name=".activity.MothionImageFilterViewActivity"/>
         <activity android:name=".activity.MothionKeysetActivity"/>
@@ -27,6 +26,7 @@
         <activity android:name=".activity.ViewPagerActivity"/>
         <activity android:name=".activity.SearchLayoutActivity"/>
         <activity android:name=".activity.EntranceActivity"/>
+        <activity android:name=".activity.CarouselActivity"/>
     </application>
 
 </manifest>
