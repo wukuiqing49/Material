@@ -4,51 +4,24 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.databinding.DataBindingUtil
 import com.wu.material.R
+import com.wu.material.activity.constraint.ConstraintLayoutDemoActivity
+import com.wu.material.activity.motionlayout.*
+import com.wu.material.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        findViewById<Button>(R.id.bt_badge).setOnClickListener {
-            startActivity(Intent(this, MothionLayoutDemo1Activity::class.java));
+     var binding=   DataBindingUtil.setContentView<ActivityMainBinding>(this,R.layout.activity_main)
+        binding.btMotionLayout.setOnClickListener {
+            startActivity(Intent(this, MotionLayoutDemoActivity::class.java));
+        }
+        binding.btConstraint.setOnClickListener {
+            startActivity(Intent(this, ConstraintLayoutDemoActivity::class.java));
         }
 
-        findViewById<Button>(R.id.bt_image_filter).setOnClickListener {
-            startActivity(Intent(this, MothionImageFilterViewActivity::class.java));
-        }
-        findViewById<Button>(R.id.bt_Keyset).setOnClickListener {
-            startActivity(Intent(this, MothionKeysetActivity::class.java));
-        }
-        findViewById<Button>(R.id.bt_coor).setOnClickListener {
-            startActivity(Intent(this, CoordinatorLayoutActivity::class.java));
-        }
-        findViewById<Button>(R.id.bt_coor2).setOnClickListener {
-            startActivity(Intent(this, CoordinatorLayout2Activity::class.java));
-        }
-        findViewById<Button>(R.id.bt_coor3).setOnClickListener {
-            startActivity(Intent(this, DrawerLayoutActivity::class.java));
 
-        }
-        findViewById<Button>(R.id.bt_coor4).setOnClickListener {
-            startActivity(Intent(this, SidePanelActivity::class.java));
-        }
-        findViewById<Button>(R.id.bt_coor5).setOnClickListener {
-            startActivity(Intent(this, ViewPagerActivity::class.java));
-        }
-        findViewById<Button>(R.id.bt_coor6).setOnClickListener {
-            startActivity(Intent(this, SearchLayoutActivity::class.java));
-        }
-
-        findViewById<Button>(R.id.bt_coor7).setOnClickListener {
-            startActivity(Intent(this, EntranceActivity::class.java));
-        }
-        findViewById<Button>(R.id.bt_coor8).setOnClickListener {
-            startActivity(Intent(this, CarouselActivity::class.java));
-        }
-        findViewById<Button>(R.id.bt_coor9).setOnClickListener {
-            startActivity(Intent(this, Carousel2Activity::class.java));
-        }
     }
 
 }

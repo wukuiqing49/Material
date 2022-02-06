@@ -1,4 +1,4 @@
-package com.wu.material.activity
+package com.wu.material.activity.motionlayout
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -16,12 +16,12 @@ import com.wu.material.R
  *
  */
 
-class CoordinatorLayoutActivity : AppCompatActivity() {
+class CoordinatorLayout2Activity : AppCompatActivity() {
 
     @SuppressLint("RestrictedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mothion_coordinator_layout)
+        setContentView(R.layout.activity_mothion_coordinator_layout2)
         //显示路径
         var motionLayout = findViewById<MotionLayout>(R.id.ml)
         motionLayout.setDebugMode(MotionLayout.DEBUG_SHOW_PATH)

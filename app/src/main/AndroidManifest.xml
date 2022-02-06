@@ -16,18 +16,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.MothionLayoutDemo1Activity"/>
-        <activity android:name=".activity.MothionImageFilterViewActivity"/>
-        <activity android:name=".activity.MothionKeysetActivity"/>
-        <activity android:name=".activity.CoordinatorLayoutActivity"/>
-        <activity android:name=".activity.CoordinatorLayout2Activity"/>
-        <activity android:name=".activity.SidePanelActivity"/>
-        <activity android:name=".activity.DrawerLayoutActivity"/>
-        <activity android:name=".activity.ViewPagerActivity"/>
-        <activity android:name=".activity.SearchLayoutActivity"/>
-        <activity android:name=".activity.EntranceActivity"/>
-        <activity android:name=".activity.CarouselActivity"/>
-        <activity android:name=".activity.Carousel2Activity"/>
+        <activity android:name=".activity.motionlayout.MothionLayoutDemo1Activity"/>
+        <activity android:name=".activity.motionlayout.MothionImageFilterViewActivity"/>
+        <activity android:name=".activity.motionlayout.MothionKeysetActivity"/>
+        <activity android:name=".activity.motionlayout.CoordinatorLayoutActivity"/>
+        <activity android:name=".activity.motionlayout.CoordinatorLayout2Activity"/>
+        <activity android:name=".activity.motionlayout.SidePanelActivity"/>
+        <activity android:name=".activity.motionlayout.DrawerLayoutActivity"/>
+        <activity android:name=".activity.motionlayout.ViewPagerActivity"/>
+        <activity android:name=".activity.motionlayout.SearchLayoutActivity"/>
+        <activity android:name=".activity.motionlayout.EntranceActivity"/>
+        <activity android:name=".activity.motionlayout.CarouselActivity"/>
+        <activity android:name=".activity.motionlayout.Carousel2Activity"/>
+        <activity android:name=".activity.motionlayout.MotionLayoutDemoActivity"/>
+        <activity android:name=".activity.constraint.ConstraintLayoutDemoActivity"/>
     </application>
 
 </manifest>

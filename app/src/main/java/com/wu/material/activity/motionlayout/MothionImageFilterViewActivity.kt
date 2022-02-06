@@ -1,4 +1,4 @@
-package com.wu.material.activity
+package com.wu.material.activity.motionlayout
 
 import android.annotation.SuppressLint
 import android.os.Bundle
