@@ -21,7 +21,7 @@
                 android:translationX="160dp"
                 motion:framePosition="50"
                 motion:motionTarget="@+id/ball"
-                motion:waveOffset="3"
+                motion:wavePeriod="1"
                 motion:waveShape="sin" />
             <KeyCycle
                 android:translationX="0dp"
