@@ -22,7 +22,12 @@
                 android:layout_height="wrap_content"
                 android:text="轮播效果2 效果" />
 
-
+            <Button
+                android:id="@+id/bt_coor10"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MotionLayout 动画插值器" />
 
             <Button
                 android:id="@+id/bt_badge"
@@ -87,6 +92,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="启动 效果" />
+
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
