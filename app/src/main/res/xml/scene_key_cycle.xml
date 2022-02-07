@@ -4,19 +4,41 @@
     xmlns:motion="http://schemas.android.com/apk/res-auto">
 
     <Transition
-        android:id="@+id/transition_ball_anticipate"
+        android:id="@+id/transition_ball"
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@+id/start"
-        motion:duration="1000"
-        motion:motionInterpolator="anticipate">
+        motion:duration="2000"
+        motion:motionInterpolator="easeInOut">
+        <!--        通过 3 个 KeyCycle 定义一个准确的循环关键帧-->
+        <KeyFrameSet>
+            <KeyCycle
+                android:translationX="0dp"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/ball"
+                motion:wavePeriod="0"
+                motion:waveShape="sin" />
+            <KeyCycle
+                android:translationX="160dp"
+                motion:framePosition="50"
+                motion:motionTarget="@+id/ball"
+                motion:waveOffset="3"
+                motion:waveShape="sin" />
+            <KeyCycle
+                android:translationX="0dp"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/ball"
+                motion:wavePeriod="0"
+                motion:waveShape="sin" />
+
+        </KeyFrameSet>
         <OnClick
             motion:clickAction="toggle"
-            motion:targetId="@+id/ball_anticipate" />
+            motion:targetId="@+id/ball" />
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
         <Constraint
-            android:id="@id/ball_anticipate"
+            android:id="@id/ball"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             motion:layout_constraintBottom_toBottomOf="parent"
@@ -30,16 +52,15 @@
 
     <ConstraintSet android:id="@+id/end">
         <Constraint
-            android:id="@id/ball_anticipate"
+            android:id="@id/ball"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintHorizontal_bias="0.85"
+            motion:layout_constraintHorizontal_bias="0.15"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintVertical_bias="0.5" />
-
 
     </ConstraintSet>
 

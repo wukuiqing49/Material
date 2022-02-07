@@ -29,6 +29,7 @@
         <activity android:name=".activity.motionlayout.CarouselActivity"/>
         <activity android:name=".activity.motionlayout.Carousel2Activity"/>
         <activity android:name=".activity.motionlayout.MothionBallActivity"/>
+        <activity android:name=".activity.motionlayout.MothionKeyCycleActivity"/>
         <activity android:name=".activity.motionlayout.MotionLayoutDemoActivity"/>
         <activity android:name=".activity.constraint.ConstraintLayoutDemoActivity"/>
     </application>

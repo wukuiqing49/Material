@@ -65,6 +65,9 @@ class MotionLayoutDemoActivity :AppCompatActivity() {
         findViewById<Button>(R.id.bt_coor10).setOnClickListener {
             startActivity(Intent(this, MothionBallActivity::class.java));
         }
+        findViewById<Button>(R.id.bt_coor11).setOnClickListener {
+            startActivity(Intent(this, MothionKeyCycleActivity::class.java));
+        }
     }
 
 
