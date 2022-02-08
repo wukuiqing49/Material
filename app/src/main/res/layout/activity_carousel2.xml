@@ -32,7 +32,7 @@
             android:scaleType="centerCrop"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
+            
             android:src="@drawable/bryce_canyon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/three"
