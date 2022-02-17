@@ -32,6 +32,7 @@
         <activity android:name=".activity.motionlayout.MothionKeyCycleActivity"/>
         <activity android:name=".activity.motionlayout.MotionLayoutDemoActivity"/>
         <activity android:name=".activity.constraint.ConstraintLayoutDemoActivity"/>
+        <activity android:name=".activity.rv.RecyclerViewActivity"/>
         <activity android:name=".activity.livedata.LiveDataActivity"/>
     </application>
 

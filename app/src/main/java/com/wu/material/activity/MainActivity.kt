@@ -3,12 +3,12 @@ package com.wu.material.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import androidx.databinding.DataBindingUtil
 import com.wu.material.R
 import com.wu.material.activity.constraint.ConstraintLayoutDemoActivity
 import com.wu.material.activity.livedata.LiveDataActivity
 import com.wu.material.activity.motionlayout.*
+import com.wu.material.activity.rv.RecyclerViewActivity
 import com.wu.material.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -23,6 +23,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btLive.setOnClickListener {
             startActivity(Intent(this, LiveDataActivity::class.java));
+        }
+        binding.btRv.setOnClickListener {
+            startActivity(Intent(this, RecyclerViewActivity::class.java));
         }
 
 
