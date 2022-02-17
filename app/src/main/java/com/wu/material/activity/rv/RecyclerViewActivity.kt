@@ -30,10 +30,11 @@ class RecyclerViewActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView<ActivityRecyclerviewBinding>(this, R.layout.activity_recyclerview)
         initView()
     }
-
     private fun initView() {
-        binding!!.rvContent.layoutManager = LinearLayoutManager(this)
         var mAdapter = DemoAdapter(this)
+        //设置LayoutManager
+        binding!!.rvContent.layoutManager = LinearLayoutManager(this)
+        //设置 Adapter
         binding!!.rvContent.adapter = mAdapter
         var listData=ArrayList<String>()
         listData.add("Android新控件")
@@ -43,9 +44,9 @@ class RecyclerViewActivity : AppCompatActivity() {
         listData.add("Banner")
         listData.add("循环效果2")
         listData.add("Android新控件之MotionLayout实现Banner循环效果2:循环")
+        //刷新数据
         mAdapter.addItems(listData)
     }
-
     // 自定义Adapter
     class DemoAdapter(mContext: Context) : RecyclerView.Adapter<DemoViewHolder>() {
         var mContext: Context? = null
@@ -59,7 +60,6 @@ class RecyclerViewActivity : AppCompatActivity() {
             var viewHolder = DemoViewHolder(view)
             return viewHolder
         }
-
         override fun onBindViewHolder(holder: DemoViewHolder, position: Int) {
            var mHolder=  holder
             mHolder.getTextView().text=listData.get(position)
@@ -71,6 +71,7 @@ class RecyclerViewActivity : AppCompatActivity() {
 
         fun addItems(items:ArrayList<String>){
             listData.addAll(items)
+            //刷新数据
             notifyDataSetChanged()
         }
 
@@ -85,8 +86,5 @@ class RecyclerViewActivity : AppCompatActivity() {
            var tvContent= rootView!!.findViewById<TextView>(R.id.tv_content)
             return tvContent
         }
-
-
     }
-
 }
