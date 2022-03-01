@@ -10,6 +10,7 @@ import com.wu.material.activity.livedata.LiveDataActivity
 import com.wu.material.activity.motionlayout.*
 import com.wu.material.activity.rv.ComplicatedRecyclerViewActivity
 import com.wu.material.activity.rv.RecyclerViewActivity
+import com.wu.material.activity.rv.StaggeredGridLayoutManagerActivity
 import com.wu.material.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -30,6 +31,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btRv2.setOnClickListener {
             startActivity(Intent(this, ComplicatedRecyclerViewActivity::class.java));
+        }
+        binding.btRv3.setOnClickListener {
+            startActivity(Intent(this, StaggeredGridLayoutManagerActivity::class.java));
         }
 
 

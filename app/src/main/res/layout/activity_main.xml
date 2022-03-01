@@ -45,6 +45,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="RecyclerView 和 GridLayoutManager" />
+            <Button
+                android:id="@+id/bt_rv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="RecyclerView 和 StaggeredGridLayoutManagerActivity" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
