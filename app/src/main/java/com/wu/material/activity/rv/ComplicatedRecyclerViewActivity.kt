@@ -8,34 +8,66 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.wu.material.R
-import com.wu.material.databinding.ActivityRecyclerviewBinding
+import com.wu.material.databinding.ActivityComplicatedRecyclerviewBinding
 
 
 /**
  * @author wkq
  *
- * @date 2022年02月17日 10:43
+ * @date 2022年03月01日 9:19
  *
  *@des
  *
  */
 
-class RecyclerViewActivity : AppCompatActivity() {
-    var binding: ActivityRecyclerviewBinding? = null
+class ComplicatedRecyclerViewActivity : AppCompatActivity() {
+    var binding: ActivityComplicatedRecyclerviewBinding? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView<ActivityRecyclerviewBinding>(this, R.layout.activity_recyclerview)
+        binding = DataBindingUtil.setContentView<ActivityComplicatedRecyclerviewBinding>(this, R.layout.activity_complicated_recyclerview)
         initView()
     }
 
     private fun initView() {
-        var mAdapter = DemoAdapter(this)
-        //设置LayoutManager
-        var linearLayoutManager = LinearLayoutManager(this)
-        binding!!.rvContent.layoutManager = linearLayoutManager
+        var mAdapter = RecyclerViewActivity.DemoAdapter(this)
+        var gridLayoutManager = GridLayoutManager(this, 120)
+        binding!!.rvContent.layoutManager = gridLayoutManager
+
+        gridLayoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
+            //设置头部占3个，其他占1个
+            override fun getSpanSize(position: Int): Int {
+                //表示每个条目占用几几份
+                when (position) {
+                    0 -> {
+                        return 120
+                    }
+                    1 -> {
+                        return 60
+                    }
+                    2 -> {
+                        return 60
+                    }
+                    3 -> {
+                        return 40
+                    }
+                    4 -> {
+                        return 40
+                    }
+                    5 -> {
+                        return 40
+                    }
+                    else -> {
+                        return 20
+                    }
+
+                }
+            }
+        }
+
         //设置 Adapter
         binding!!.rvContent.adapter = mAdapter
         var listData = ArrayList<String>()
@@ -59,6 +91,7 @@ class RecyclerViewActivity : AppCompatActivity() {
         //刷新数据
         mAdapter.addItems(listData)
     }
+
 
     // 自定义Adapter
     class DemoAdapter(mContext: Context) : RecyclerView.Adapter<DemoViewHolder>() {
@@ -106,4 +139,6 @@ class RecyclerViewActivity : AppCompatActivity() {
             return tvContent
         }
     }
+
+
 }

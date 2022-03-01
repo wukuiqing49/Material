@@ -8,6 +8,7 @@ import com.wu.material.R
 import com.wu.material.activity.constraint.ConstraintLayoutDemoActivity
 import com.wu.material.activity.livedata.LiveDataActivity
 import com.wu.material.activity.motionlayout.*
+import com.wu.material.activity.rv.ComplicatedRecyclerViewActivity
 import com.wu.material.activity.rv.RecyclerViewActivity
 import com.wu.material.databinding.ActivityMainBinding
 
@@ -26,6 +27,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btRv.setOnClickListener {
             startActivity(Intent(this, RecyclerViewActivity::class.java));
+        }
+        binding.btRv2.setOnClickListener {
+            startActivity(Intent(this, ComplicatedRecyclerViewActivity::class.java));
         }
 
 
