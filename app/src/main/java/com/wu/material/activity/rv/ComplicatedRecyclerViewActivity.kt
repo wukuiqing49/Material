@@ -34,13 +34,13 @@ class ComplicatedRecyclerViewActivity : AppCompatActivity() {
 
     private fun initView() {
         var mAdapter = RecyclerViewActivity.DemoAdapter(this)
+        //一行分多少份
         var gridLayoutManager = GridLayoutManager(this, 120)
         binding!!.rvContent.layoutManager = gridLayoutManager
 
         gridLayoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
-            //设置头部占3个，其他占1个
             override fun getSpanSize(position: Int): Int {
-                //表示每个条目占用几几份
+                // 返回的是 表示每个条目占用几几份  屏幕分了120份
                 when (position) {
                     0 -> {
                         return 120
@@ -60,8 +60,11 @@ class ComplicatedRecyclerViewActivity : AppCompatActivity() {
                     5 -> {
                         return 40
                     }
+                    6 -> {
+                        return 120
+                    }
                     else -> {
-                        return 20
+                        return 30
                     }
 
                 }
