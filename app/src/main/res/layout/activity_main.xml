@@ -51,6 +51,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="RecyclerView 和 StaggeredGridLayoutManagerActivity" />
+            <Button
+                android:id="@+id/bt_rv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Kotlin 携程 和图片保存(兼容处理)" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

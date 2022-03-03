@@ -35,6 +35,9 @@ class MainActivity : AppCompatActivity() {
         binding.btRv3.setOnClickListener {
             startActivity(Intent(this, StaggeredGridLayoutManagerActivity::class.java));
         }
+        binding.btRv4.setOnClickListener {
+            startActivity(Intent(this, CoroutinesActivity::class.java));
+        }
 
 
     }
