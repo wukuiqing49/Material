@@ -9,6 +9,7 @@ import com.wu.material.activity.constraint.ConstraintLayoutDemoActivity
 import com.wu.material.activity.livedata.LiveDataActivity
 import com.wu.material.activity.motionlayout.*
 import com.wu.material.activity.rv.ComplicatedRecyclerViewActivity
+import com.wu.material.activity.rv.RecyclerTreeViewActivity
 import com.wu.material.activity.rv.RecyclerViewActivity
 import com.wu.material.activity.rv.StaggeredGridLayoutManagerActivity
 import com.wu.material.databinding.ActivityMainBinding
@@ -37,6 +38,10 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btRv4.setOnClickListener {
             startActivity(Intent(this, CoroutinesActivity::class.java));
+        }
+
+        binding.btRv5.setOnClickListener {
+            startActivity(Intent(this, RecyclerTreeViewActivity::class.java));
         }
 
 

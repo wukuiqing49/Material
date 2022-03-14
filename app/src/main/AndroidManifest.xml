@@ -59,6 +59,7 @@
         <activity android:name=".activity.rv.RecyclerViewActivity"/>
         <activity android:name=".activity.rv.ComplicatedRecyclerViewActivity"/>
         <activity android:name=".activity.rv.StaggeredGridLayoutManagerActivity"/>
+        <activity android:name=".activity.rv.RecyclerTreeViewActivity"/>
         <activity android:name=".activity.livedata.LiveDataActivity"/>
         <activity android:name=".activity.CoroutinesActivity"/>
     </application>
