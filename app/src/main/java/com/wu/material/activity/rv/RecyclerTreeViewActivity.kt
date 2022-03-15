@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.SimpleItemAnimator
+import com.google.gson.Gson
 import com.wu.material.R
 import com.wu.material.activity.rv.adapter.DemoTreeAdapter
+import com.wu.material.activity.rv.model.NodeInfo
 import com.wu.material.activity.rv.model.TreeContentInfo
 import com.wu.material.activity.rv.model.TreeInfo
 import com.wu.material.databinding.ActivityRecyclerviewBinding
@@ -22,11 +24,155 @@ import com.wu.material.databinding.ActivityRecyclerviewBinding
  */
 
 class RecyclerTreeViewActivity : AppCompatActivity() {
+
+    var datas="{\n" +
+            "    \"id\": 46,\n" +
+            "    \"name\": \"沧县\",\n" +
+            "    \"description\": \"0\",\n" +
+            "    \"domainid\": 0,\n" +
+            "    \"sCode\": \"1\",\n" +
+            "    \"iCode\": null,\n" +
+            "    \"orderindex\": 0,\n" +
+            "    \"parentid\": 40,\n" +
+            "    \"parentName\": null,\n" +
+            "    \"regtype\": 0,\n" +
+            "    \"sn\": null,\n" +
+            "    \"usecode\": false,\n" +
+            "    \"full_name\": \"沧县\",\n" +
+            "    \"label_icon\": \"rule_icon_region\",\n" +
+            "    \"nodes\": [\n" +
+            "      {\n" +
+            "        \"id\": 49,\n" +
+            "        \"name\": \"保定县\",\n" +
+            "        \"description\": null,\n" +
+            "        \"domainid\": 0,\n" +
+            "        \"sCode\": \"1\",\n" +
+            "        \"iCode\": null,\n" +
+            "        \"orderindex\": 0,\n" +
+            "        \"parentid\": 42,\n" +
+            "        \"parentName\": null,\n" +
+            "        \"regtype\": 0,\n" +
+            "        \"sn\": null,\n" +
+            "        \"usecode\": false,\n" +
+            "        \"full_name\": \"沧县\\\\保定县\",\n" +
+            "        \"label_icon\": \"rule_icon_region\",\n" +
+            "        \"nodes\": [\n" +
+            "          {\n" +
+            "            \"id\": 50,\n" +
+            "            \"name\": \"保定乡\",\n" +
+            "            \"description\": null,\n" +
+            "            \"domainid\": 0,\n" +
+            "            \"sCode\": \"1\",\n" +
+            "            \"iCode\": null,\n" +
+            "            \"orderindex\": 0,\n" +
+            "            \"parentid\": 49,\n" +
+            "            \"parentName\": null,\n" +
+            "            \"regtype\": 0,\n" +
+            "            \"sn\": null,\n" +
+            "            \"usecode\": false,\n" +
+            "            \"full_name\": \"沧县\\\\保定县\\\\保定乡\",\n" +
+            "            \"label_icon\": \"rule_icon_region\",\n" +
+            "            \"nodes\": [\n" +
+            "              {\n" +
+            "                \"id\": 52,\n" +
+            "                \"name\": \"保定村村村村村村\",\n" +
+            "                \"description\": null,\n" +
+            "                \"domainid\": 0,\n" +
+            "                \"sCode\": \"1\",\n" +
+            "                \"iCode\": null,\n" +
+            "                \"orderindex\": 0,\n" +
+            "                \"parentid\": 50,\n" +
+            "                \"parentName\": null,\n" +
+            "                \"regtype\": 0,\n" +
+            "                \"sn\": null,\n" +
+            "                \"usecode\": false,\n" +
+            "                \"full_name\": \"沧县\\\\保定县\\\\保定乡\\\\保定村村村村村村\",\n" +
+            "                \"label_icon\": \"rule_icon_region\",\n" +
+            "                \"nodes\": []\n" +
+            "              }\n" +
+            "            ]\n" +
+            "          }\n" +
+            "        ]\n" +
+            "      },\n" +
+            "      {\n" +
+            "        \"id\": 53,\n" +
+            "        \"name\": \"灵寿乡\",\n" +
+            "        \"description\": null,\n" +
+            "        \"domainid\": 0,\n" +
+            "        \"sCode\": \"1\",\n" +
+            "        \"iCode\": null,\n" +
+            "        \"orderindex\": 0,\n" +
+            "        \"parentid\": 44,\n" +
+            "        \"parentName\": null,\n" +
+            "        \"regtype\": 0,\n" +
+            "        \"sn\": null,\n" +
+            "        \"usecode\": false,\n" +
+            "        \"full_name\": \"沧县\\\\灵寿乡\",\n" +
+            "        \"label_icon\": \"rule_icon_region\",\n" +
+            "        \"nodes\": []\n" +
+            "      },\n" +
+            "      {\n" +
+            "        \"id\": 54,\n" +
+            "        \"name\": \"柏乡3\",\n" +
+            "        \"description\": null,\n" +
+            "        \"domainid\": 0,\n" +
+            "        \"sCode\": \"1\",\n" +
+            "        \"iCode\": null,\n" +
+            "        \"orderindex\": 0,\n" +
+            "        \"parentid\": 46,\n" +
+            "        \"parentName\": null,\n" +
+            "        \"regtype\": 0,\n" +
+            "        \"sn\": null,\n" +
+            "        \"usecode\": false,\n" +
+            "        \"full_name\": \"沧县\\\\柏乡3\",\n" +
+            "        \"label_icon\": \"rule_icon_region\",\n" +
+            "        \"nodes\": []\n" +
+            "      },\n" +
+            "      {\n" +
+            "        \"id\": 48,\n" +
+            "        \"name\": \"柏乡2\",\n" +
+            "        \"description\": \"0\",\n" +
+            "        \"domainid\": 0,\n" +
+            "        \"sCode\": \"123\",\n" +
+            "        \"iCode\": null,\n" +
+            "        \"orderindex\": 0,\n" +
+            "        \"parentid\": 46,\n" +
+            "        \"parentName\": null,\n" +
+            "        \"regtype\": 0,\n" +
+            "        \"sn\": null,\n" +
+            "        \"usecode\": false,\n" +
+            "        \"full_name\": \"沧县\\\\柏乡2\",\n" +
+            "        \"label_icon\": \"rule_icon_region\",\n" +
+            "        \"nodes\": []\n" +
+            "      },\n" +
+            "      {\n" +
+            "        \"id\": 47,\n" +
+            "        \"name\": \"柏乡1\",\n" +
+            "        \"description\": \"1234\",\n" +
+            "        \"domainid\": 0,\n" +
+            "        \"sCode\": \"1234\",\n" +
+            "        \"iCode\": null,\n" +
+            "        \"orderindex\": 0,\n" +
+            "        \"parentid\": 46,\n" +
+            "        \"parentName\": null,\n" +
+            "        \"regtype\": 0,\n" +
+            "        \"sn\": null,\n" +
+            "        \"usecode\": false,\n" +
+            "        \"full_name\": \"沧县\\\\柏乡1\",\n" +
+            "        \"label_icon\": \"rule_icon_region\",\n" +
+            "        \"nodes\": []\n" +
+            "      }\n" +
+            "    ]\n" +
+            "  }"
     var binding: ActivityRecyclerviewBinding? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView<ActivityRecyclerviewBinding>(this, R.layout.activity_recyclerview)
+
+
         initView()
+
+
     }
 
     private fun initView() {
@@ -36,31 +182,13 @@ class RecyclerTreeViewActivity : AppCompatActivity() {
         binding!!.rvContent.layoutManager = linearLayoutManager
         //设置 Adapter
         binding!!.rvContent.adapter = mAdapter
-//        binding!!.rvContent.setHasFixedSize(true)
-//        //关闭动画效果
-//        var sa = binding!!.rvContent.getItemAnimator() as SimpleItemAnimator;
-//        sa.setSupportsChangeAnimations(false);
-//        //设置动画为空
-//        binding!!.rvContent.setItemAnimator(null)
 
-        var listData = ArrayList<TreeInfo>()
+        var listData = ArrayList<NodeInfo>()
         //刷新数据
-        for (index in 0..10) {
-            var contentDatas = ArrayList<TreeInfo>()
-            for (index in 0..10) {
-                var contentDatas2 = ArrayList<TreeInfo>()
+        var gson= Gson();
 
-                for (index in 0..5) {
-                    var info = TreeInfo(-1, false, "这是最里边内容:" + index + "类型" + 2, ArrayList<TreeInfo>())
-                    contentDatas2.add(info)
-                }
-                var info = TreeInfo(1, false, "标题:" + index, contentDatas2)
-                contentDatas.add(info)
-            }
-            var group = TreeInfo(0, false, "标题" + index, contentDatas)
-            listData.add(group)
-        }
-
+        var info= gson.fromJson(datas,NodeInfo::class.java)
+        listData.add(info)
         mAdapter.addItems(listData)
 
         mAdapter.setOnItemClickListener(object : DemoTreeAdapter.ItemClickListener {

@@ -28,8 +28,11 @@ class KtViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         return tvContent
     }
     fun getImageView(): ImageView {
-        var tvContent =
         return rootView!!.findViewById<ImageView>(R.id.iv_icon)
+    }
+
+    fun getAddressTypeImageView(): ImageView {
+            return rootView!!.findViewById<ImageView>(R.id.iv_icon_type)
     }
 
     fun getRecyclerView(): RecyclerView {

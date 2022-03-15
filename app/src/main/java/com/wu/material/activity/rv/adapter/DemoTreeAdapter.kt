@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SimpleItemAnimator
 import com.wu.material.R
+import com.wu.material.activity.rv.model.NodeInfo
 import com.wu.material.activity.rv.model.TreeInfo
 
 
@@ -23,7 +24,7 @@ import com.wu.material.activity.rv.model.TreeInfo
 
 class DemoTreeAdapter(mContext: Context) : RecyclerView.Adapter<KtViewHolder>() {
     var mContext: Context? = null
-    var listData = ArrayList<TreeInfo>()
+    var listData = ArrayList<NodeInfo>()
 
     init {
         this.mContext = mContext
@@ -36,22 +37,24 @@ class DemoTreeAdapter(mContext: Context) : RecyclerView.Adapter<KtViewHolder>() 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): KtViewHolder {
 
-        var view = LayoutInflater.from(mContext).inflate(R.layout.item_rv_tree_content, parent, false)
+        var view =
+            LayoutInflater.from(mContext).inflate(R.layout.item_rv_tree_content, parent, false)
         var viewHolder = KtViewHolder(view)
         return viewHolder
     }
 
-    fun getItem(position: Int): TreeInfo {
+    fun getItem(position: Int): NodeInfo {
         return listData.get(position)
     }
+
     // 局部刷新
     override fun onBindViewHolder(holder: KtViewHolder, position: Int, payloads: MutableList<Any>) {
         super.onBindViewHolder(holder, position, payloads)
         var info = listData.get(position)
-        var iconImageView = holder.getImageView()
+        var iconImageView = holder.getAddressTypeImageView()
         var recycleView = holder.getRecyclerView()
         if (payloads != null && payloads!!.size > 0 && "1".equals(payloads.get(0))) {
-            if (info.type == -1) {
+            if (info.nodes.size == 0) {
                 iconImageView.visibility = View.GONE
             } else {
                 iconImageView.visibility = View.VISIBLE
@@ -60,6 +63,11 @@ class DemoTreeAdapter(mContext: Context) : RecyclerView.Adapter<KtViewHolder>() 
                 } else {
                     recycleView.visibility = View.GONE
                 }
+            }
+            if (info.isExpen) {
+                iconImageView.setBackgroundResource(R.mipmap.iv_address_delete)
+            } else {
+                iconImageView.setBackgroundResource(R.mipmap.iv_address_add)
             }
         } else {
             super.onBindViewHolder(holder, position, payloads);
@@ -71,13 +79,13 @@ class DemoTreeAdapter(mContext: Context) : RecyclerView.Adapter<KtViewHolder>() 
         var mHolder = holder
         var info = listData.get(position)
         var titleTextView = mHolder.getTextView()
-        titleTextView.text = listData.get(position).title
+        titleTextView.text = listData.get(position).name
         var recycleView = mHolder.getRecyclerView()
-        var iconImageView = mHolder.getImageView()
+        var iconImageView = mHolder.getAddressTypeImageView()
         recycleView.layoutManager = LinearLayoutManager(mContext)
         var contentAdapter = DemoTreeAdapter(mContext!!)
         recycleView.adapter = contentAdapter
-        if (info.type == -1) {
+        if (info.nodes.size == 0) {
             iconImageView.visibility = View.GONE
         } else {
             iconImageView.visibility = View.VISIBLE
@@ -86,15 +94,21 @@ class DemoTreeAdapter(mContext: Context) : RecyclerView.Adapter<KtViewHolder>() 
             } else {
                 recycleView.visibility = View.GONE
             }
-            contentAdapter.addItems(info.contentDatas!!)
+            contentAdapter.addItems(info.nodes)
+        }
+
+        if (info.isExpen) {
+            iconImageView.setBackgroundResource(R.mipmap.iv_address_delete)
+        } else {
+            iconImageView.setBackgroundResource(R.mipmap.iv_address_add)
         }
 
         contentAdapter.setOnItemClickListener(object : DemoTreeAdapter.ItemClickListener {
             override fun onItemClick(position: Int) {
                 var info = contentAdapter.getItem(position)
-                if (info.type==-1){
-                    Toast.makeText(mContext,info.title,Toast.LENGTH_SHORT).show()
-                }else{
+                if (info.nodes.size == 0) {
+                    Toast.makeText(mContext, info.full_name, Toast.LENGTH_SHORT).show()
+                } else {
                     info.isExpen = !info.isExpen
                     contentAdapter.notifyItemChanged(position, "1")
                 }
@@ -119,7 +133,7 @@ class DemoTreeAdapter(mContext: Context) : RecyclerView.Adapter<KtViewHolder>() 
         return super.getItemViewType(position)
     }
 
-    fun addItems(items: List<TreeInfo>) {
+    fun addItems(items: List<NodeInfo>) {
         listData.addAll(items)
         //刷新数据
         notifyDataSetChanged()
