@@ -43,6 +43,12 @@ class MainActivity : AppCompatActivity() {
         binding.btRv5.setOnClickListener {
             startActivity(Intent(this, RecyclerTreeViewActivity::class.java));
         }
+        binding.btRv6.setOnClickListener {
+            startActivity(Intent(this, LazyLoadingFragmentActivity::class.java));
+        }
+        binding.btRv7.setOnClickListener {
+            startActivity(Intent(this, LazyLoadingFragmentActivity2::class.java));
+        }
 
 
     }

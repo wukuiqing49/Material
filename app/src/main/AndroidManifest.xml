@@ -62,6 +62,8 @@
         <activity android:name=".activity.rv.RecyclerTreeViewActivity"/>
         <activity android:name=".activity.livedata.LiveDataActivity"/>
         <activity android:name=".activity.CoroutinesActivity"/>
+        <activity android:name=".activity.LazyLoadingFragmentActivity"/>
+        <activity android:name=".activity.LazyLoadingFragmentActivity2"/>
     </application>
 
 </manifest>

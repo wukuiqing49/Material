@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.wu.material.R
 
@@ -19,12 +20,12 @@ import com.wu.material.R
  *
  */
 
-class DemoFragment : Fragment() {
+class DemoFragment3 : Fragment() {
     companion object {
-        fun newInstance(): DemoFragment {
+        fun newInstance(): DemoFragment3 {
             val args = Bundle()
 
-            val fragment = DemoFragment()
+            val fragment = DemoFragment3()
             fragment.arguments = args
             return fragment
         }
@@ -33,12 +34,12 @@ class DemoFragment : Fragment() {
 //    onPause -> onStop -> onDestroyView -> onDestroy -> onDetach
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        Log.e("DemoFragment:","onAttach()")
+        Log.e("DemoFragment3:","onAttach()")
 
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.e("DemoFragment:","onCreate()")
+        Log.e("DemoFragment3:","onCreate()")
     }
 
 
@@ -48,50 +49,61 @@ class DemoFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.e("DemoFragment:","onCreateView()")
+        Log.e("DemoFragment3:","onCreateView()")
         return inflater.inflate(R.layout.page_1, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Log.e("DemoFragment:","onViewCreated()")
+        Log.e("DemoFragment3:","onViewCreated()")
 
     }
+    override fun onHiddenChanged(hidden: Boolean) {
+        super.onHiddenChanged(hidden)
+        Log.e("DemoFragment3:","onHiddenChanged()"+hidden)
+    }
+
+    override fun setUserVisibleHint(isVisibleToUser: Boolean) {
+        super.setUserVisibleHint(isVisibleToUser)
+        Log.e("DemoFragment3:","setUserVisibleHint()"+isVisibleToUser)
+    }
+
 
     override fun onStart() {
         super.onStart()
-        Log.e("DemoFragment:","onStart()")
+        Log.e("DemoFragment3:","onStart()")
 
     }
 
     override fun onResume() {
         super.onResume()
-        Log.e("DemoFragment:","onResume()")
+        Toast.makeText(activity,"DemoFragment3懒加载加载数据", Toast.LENGTH_SHORT).show()
+        Log.e("DemoFragment3:","onResume()")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.e("DemoFragment:","onPause()")
+        Log.e("DemoFragment3:","onPause()")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.e("DemoFragment:","onStop()")
+        Log.e("DemoFragment3:","onStop()")
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        Log.e("DemoFragment:","onDestroyView()")
+        Log.e("DemoFragment3:","onDestroyView()")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.e("DemoFragment:","onDestroy()")
+        Log.e("DemoFragment3:","onDestroy()")
     }
 
     override fun onDetach() {
         super.onDetach()
-        Log.e("DemoFragment:","onDetach()")
+        Log.e("DemoFragment3:","onDetach()")
     }
 
 }

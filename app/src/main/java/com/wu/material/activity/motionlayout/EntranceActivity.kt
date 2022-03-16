@@ -3,12 +3,7 @@ package com.wu.material.activity.motionlayout
 import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.motion.widget.MotionLayout
-import androidx.viewpager.widget.ViewPager
-import com.google.android.material.tabs.TabLayout
 import com.wu.material.R
-import com.wu.material.adapter.ViewPagerAdapter
-import com.wu.material.fragment.DemoFragment
 
 
 /**

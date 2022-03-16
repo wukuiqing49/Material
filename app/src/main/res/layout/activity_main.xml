@@ -65,6 +65,20 @@
                 android:layout_marginTop="10dp"
                 android:text="Kotlin 携程 和图片保存(兼容处理)" />
 
+            <Button
+                android:id="@+id/bt_rv6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Fragment 懒加载方案一" />
+
+            <Button
+                android:id="@+id/bt_rv7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Fragment 懒加载方案二" />
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

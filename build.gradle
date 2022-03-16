@@ -3,7 +3,11 @@ buildscript {
     ext.kotlin_version = "1.4.32"
     repositories {
         google()
-        jcenter()
+        mavenCentral()
+
+        maven {
+            url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/"
+        }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.0.1"
@@ -17,7 +21,18 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
+
+        maven {
+            url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/"
+        }
+        jcenter() { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'http://developer.huawei.com/repo/' }
+        maven { url 'https://repo1.maven.org/maven2/' }
     }
 }
 
