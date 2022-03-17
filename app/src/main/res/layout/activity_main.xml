@@ -15,21 +15,21 @@
                 android:id="@+id/bt_motion_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:text="MotionLayout学习" />
 
             <Button
                 android:id="@+id/bt_constraint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:text="ConstraintLayout学习" />
 
             <Button
                 android:id="@+id/bt_live"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:text="LiveData学习" />
 
 
@@ -37,47 +37,54 @@
                 android:id="@+id/bt_rv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:text="RecyclerView 和 LinearLayoutManager" />
             <Button
                 android:id="@+id/bt_rv2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:text="RecyclerView 和 GridLayoutManager" />
             <Button
                 android:id="@+id/bt_rv3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:text="RecyclerView 和 StaggeredGridLayoutManagerActivity" />
 
             <Button
                 android:id="@+id/bt_rv5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:text="RecyclerView 树形结构" />
             <Button
                 android:id="@+id/bt_rv4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:text="Kotlin 携程 和图片保存(兼容处理)" />
 
             <Button
                 android:id="@+id/bt_rv6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:text="Fragment 懒加载方案一" />
 
             <Button
                 android:id="@+id/bt_rv7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:text="Fragment 懒加载方案二" />
+
+            <Button
+                android:id="@+id/bt_rv8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="百度地图" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

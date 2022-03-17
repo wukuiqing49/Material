@@ -12,6 +12,7 @@ import com.wu.material.activity.rv.ComplicatedRecyclerViewActivity
 import com.wu.material.activity.rv.RecyclerTreeViewActivity
 import com.wu.material.activity.rv.RecyclerViewActivity
 import com.wu.material.activity.rv.StaggeredGridLayoutManagerActivity
+import com.wu.material.bdmap.MaterialMapActivity
 import com.wu.material.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -49,7 +50,9 @@ class MainActivity : AppCompatActivity() {
         binding.btRv7.setOnClickListener {
             startActivity(Intent(this, LazyLoadingFragmentActivity2::class.java));
         }
-
+        binding.btRv8.setOnClickListener {
+            startActivity(Intent(this, MaterialMapActivity::class.java));
+        }
 
     }
 

@@ -3,6 +3,7 @@ package com.wu.material.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import androidx.fragment.app.FragmentStatePagerAdapter
 
 
 /**
@@ -14,7 +15,7 @@ import androidx.fragment.app.FragmentPagerAdapter
  *
  */
 
-class ViewPagerAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(
+class ViewPagerAdapter(fragmentManager: FragmentManager) : FragmentStatePagerAdapter(
     fragmentManager,
     BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
 ) {
