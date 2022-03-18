@@ -6,8 +6,6 @@ plugins {
 static def stringValue(def value) {
     return "\"${value}\""
 }
-
-
 android {
     compileSdkVersion = 30
     buildToolsVersion = "30.0.3"
@@ -65,7 +63,6 @@ android {
             outputFileName = "material-${variant.versionName}-${variant.name}.apk"
         }
     }
-
     repositories {
         flatDir {
             dirs "lib"
@@ -106,6 +103,7 @@ dependencies {
 
     //指针
     implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+
     //定位
     implementation 'com.baidu.lbsyun:BaiduMapSDK_Location:9.1.8'
     //地图

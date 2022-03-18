@@ -6,6 +6,8 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import com.wu.material.R
 import com.wu.material.activity.constraint.ConstraintLayoutDemoActivity
+import com.wu.material.activity.lazy.LazyLoadingFragmentActivity
+import com.wu.material.activity.lazy.LazyLoadingFragmentActivity2
 import com.wu.material.activity.livedata.LiveDataActivity
 import com.wu.material.activity.motionlayout.*
 import com.wu.material.activity.rv.ComplicatedRecyclerViewActivity

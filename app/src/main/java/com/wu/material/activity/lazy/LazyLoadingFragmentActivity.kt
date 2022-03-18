@@ -1,4 +1,4 @@
-package com.wu.material.activity
+package com.wu.material.activity.lazy
 
 import android.content.Context
 import android.graphics.Color
