@@ -78,6 +78,7 @@
         <activity android:name=".activity.constraint.ConstraintLayoutDemoActivity"/>
         <activity android:name=".activity.rv.RecyclerViewActivity"/>
         <activity android:name=".activity.rv.ComplicatedRecyclerViewActivity"/>
+        <activity android:name=".activity.rv.RecyclerHomeActivityActivity"/>
         <activity android:name=".activity.rv.StaggeredGridLayoutManagerActivity"/>
         <activity android:name=".activity.rv.RecyclerTreeViewActivity"/>
         <activity android:name=".activity.livedata.LiveDataActivity"/>

@@ -38,26 +38,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="RecyclerView 和 LinearLayoutManager" />
-            <Button
-                android:id="@+id/bt_rv2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="RecyclerView 和 GridLayoutManager" />
-            <Button
-                android:id="@+id/bt_rv3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="RecyclerView 和 StaggeredGridLayoutManagerActivity" />
+                android:text="RecyclerView 学习" />
 
-            <Button
-                android:id="@+id/bt_rv5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="RecyclerView 树形结构" />
             <Button
                 android:id="@+id/bt_rv4"
                 android:layout_width="wrap_content"
