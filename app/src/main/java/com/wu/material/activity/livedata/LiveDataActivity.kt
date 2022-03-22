@@ -21,7 +21,7 @@ import com.wu.material.viewmodel.LiveDataDemoModel
 class LiveDataActivity : AppCompatActivity() {
 
     var binding: ActivityLivedataBinding? = null
-    var liveData:  LiveDataDemoModel?=null
+    var liveData: LiveDataDemoModel? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView<ActivityLivedataBinding>(
@@ -29,12 +29,12 @@ class LiveDataActivity : AppCompatActivity() {
             R.layout.activity_livedata
         )
         //创建LiveData
-        liveData= LiveDataDemoModel()
+        liveData = LiveDataDemoModel()
         //注册观察
-        liveData!!.getLivedata().observe(this,object :Observer<String>{
+        liveData!!.getLivedata().observe(this, object : Observer<String> {
             override fun onChanged(t: String?) {
                 //接收数据 页面变化
-                binding!!.tvContent.text=t
+                binding!!.tvContent.text = t
             }
         })
         initView()
@@ -44,7 +44,7 @@ class LiveDataActivity : AppCompatActivity() {
 
         binding!!.btChange.setOnClickListener {
             //数据更改
-            liveData!!.livadata.value="更改了数据"
+            liveData!!.livadata.value = "更改了数据"
         }
 
     }
