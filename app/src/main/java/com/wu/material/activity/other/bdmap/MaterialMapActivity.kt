@@ -1,12 +1,10 @@
-package com.wu.material.bdmap
+package com.wu.material.activity.other.bdmap
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import com.baidu.location.LocationClientOption
-import com.baidu.mapapi.map.BaiduMap
 import com.baidu.mapapi.search.sug.SuggestionResult
 import com.wu.material.R
 import com.wu.material.databinding.LayoutMapLayerBinding

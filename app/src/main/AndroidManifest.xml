@@ -85,7 +85,9 @@
         <activity android:name=".activity.CoroutinesActivity"/>
         <activity android:name=".activity.lazy.LazyLoadingFragmentActivity"/>
         <activity android:name=".activity.lazy.LazyLoadingFragmentActivity2"/>
-        <activity android:name=".bdmap.MaterialMapActivity"/>
+        <activity android:name="com.wu.material.activity.other.bdmap.MaterialMapActivity"/>
+        <activity android:name=".activity.other.OtherActivity"/>
+        <activity android:name=".activity.other.mmkv.MMKVActivity"/>
     </application>
 
 </manifest>

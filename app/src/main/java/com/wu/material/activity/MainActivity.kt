@@ -10,8 +10,8 @@ import com.wu.material.activity.lazy.LazyLoadingFragmentActivity
 import com.wu.material.activity.lazy.LazyLoadingFragmentActivity2
 import com.wu.material.activity.livedata.LiveDataActivity
 import com.wu.material.activity.motionlayout.*
+import com.wu.material.activity.other.OtherActivity
 import com.wu.material.activity.rv.*
-import com.wu.material.bdmap.MaterialMapActivity
 import com.wu.material.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -35,7 +35,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, CoroutinesActivity::class.java));
         }
 
-
         binding.btRv6.setOnClickListener {
             startActivity(Intent(this, LazyLoadingFragmentActivity::class.java));
         }
@@ -43,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, LazyLoadingFragmentActivity2::class.java));
         }
         binding.btRv8.setOnClickListener {
-            startActivity(Intent(this, MaterialMapActivity::class.java));
+            startActivity(Intent(this, OtherActivity::class.java));
         }
 
     }

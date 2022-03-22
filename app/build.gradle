@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
 }
 
 static def stringValue(def value) {
@@ -110,4 +111,8 @@ dependencies {
     implementation 'com.baidu.lbsyun:BaiduMapSDK_Map:7.4.0'
     implementation 'com.baidu.lbsyun:BaiduMapSDK_Search:7.4.0'
     implementation 'com.baidu.lbsyun:BaiduMapSDK_Util:7.4.0'
+    //数据存储(key values)
+    implementation 'com.tencent:mmkv:1.2.12'
+    //处理 mmkv android api 19 更新找不到  libmmkv.so java.lang.UnsatisfiedLinkError 异常
+    implementation 'com.getkeepsafe.relinker:relinker:1.4.4'
 }

@@ -1,13 +1,9 @@
-package com.wu.material.bdmap
+package com.wu.material.activity.other.bdmap
 
 import android.Manifest
 import android.os.Bundle
-import android.view.View
-import android.view.ViewGroup
 import android.widget.RelativeLayout
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
 import com.baidu.location.LocationClient
 import com.baidu.location.LocationClientOption
 import com.baidu.mapapi.map.*

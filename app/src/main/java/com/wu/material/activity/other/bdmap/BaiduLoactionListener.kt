@@ -1,4 +1,4 @@
-package com.wu.material.bdmap
+package com.wu.material.activity.other.bdmap
 
 import com.baidu.location.BDAbstractLocationListener
 import com.baidu.location.BDLocation
