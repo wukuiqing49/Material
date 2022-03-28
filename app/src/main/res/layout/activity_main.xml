@@ -70,6 +70,13 @@
                 android:layout_marginTop="5dp"
                 android:text="三方库使用" />
 
+            <Button
+                android:id="@+id/bt_media"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="音频播放" />
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

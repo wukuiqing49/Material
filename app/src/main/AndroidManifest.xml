@@ -88,6 +88,7 @@
         <activity android:name="com.wu.material.activity.other.bdmap.MaterialMapActivity"/>
         <activity android:name=".activity.other.OtherActivity"/>
         <activity android:name=".activity.other.mmkv.MMKVActivity"/>
+        <activity android:name=".activity.MediaPlayerActivity"/>
     </application>
 
 </manifest>

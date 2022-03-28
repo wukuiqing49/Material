@@ -44,6 +44,9 @@ class MainActivity : AppCompatActivity() {
         binding.btRv8.setOnClickListener {
             startActivity(Intent(this, OtherActivity::class.java));
         }
+        binding.btMedia.setOnClickListener {
+            startActivity(Intent(this, MediaPlayerActivity::class.java));
+        }
 
     }
 
