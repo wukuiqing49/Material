@@ -8,6 +8,10 @@ buildscript {
         maven {
             url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/"
         }
+        maven { url 'https://www.jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/releases' }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.0.1"
@@ -33,6 +37,13 @@ allprojects {
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'http://developer.huawei.com/repo/' }
         maven { url 'https://repo1.maven.org/maven2/' }
+
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/repositories/releases/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
     }
 }
 
