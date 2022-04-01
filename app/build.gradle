@@ -13,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId "com.wu.material"
-        minSdkVersion 21
+        minSdkVersion 24
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -115,4 +115,6 @@ dependencies {
     implementation 'com.tencent:mmkv:1.2.12'
     //处理 mmkv android api 19 更新找不到  libmmkv.so java.lang.UnsatisfiedLinkError 异常
     implementation 'com.getkeepsafe.relinker:relinker:1.4.4'
+    //拖拽
+//    implementation "androidx.draganddrop:draganddrop:1.0.0-beta01"
 }

@@ -18,6 +18,10 @@
     <!-- 这个权限用于访问GPS定位 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <application
         android:name=".application.MaterialApplication"
         android:allowBackup="true"
@@ -89,6 +93,7 @@
         <activity android:name=".activity.other.OtherActivity"/>
         <activity android:name=".activity.other.mmkv.MMKVActivity"/>
         <activity android:name=".activity.MediaPlayerActivity"/>
+        <activity android:name=".activity.DragAndDropActivity"/>
     </application>
 
 </manifest>

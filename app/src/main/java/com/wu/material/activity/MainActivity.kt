@@ -13,6 +13,7 @@ import com.wu.material.activity.motionlayout.*
 import com.wu.material.activity.other.OtherActivity
 import com.wu.material.activity.rv.*
 import com.wu.material.databinding.ActivityMainBinding
+import com.wu.material.util.NotificationUtil
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,6 +47,10 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btMedia.setOnClickListener {
             startActivity(Intent(this, MediaPlayerActivity::class.java));
+        }
+        binding.btTz.setOnClickListener {
+//            startActivity(Intent(this, DragAndDropActivity::class.java));
+            NotificationUtil.initNotification(this,"1111","222")
         }
 
     }
