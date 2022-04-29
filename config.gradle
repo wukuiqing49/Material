@@ -1,0 +1,30 @@
+ext {
+    //Nexus 访问账号
+    nexusId = "developer"
+    nexusPw = "android_2019"
+
+    //Nexus 发布配置
+    maven = [
+            //发布版地址(暂未使用)
+            mavenUrl     : "http://android.nexus.cnlive.com/repository/cnlive/",
+            //快照版地址（暂未使用）
+            mavenDevUrl  : "http://android.nexus.cnlive.com/repository/cnlive-snapshot/",
+            //混合版地址
+            mavenMixedUrl  : "http://android.nexus.cnlive.com/repository/cnlive-mixed/",
+            //发布账号（单独分配）
+            mavenUserName: "developer",
+            mavenPwd     : "android_2019"
+    ]
+
+    //Maven Base库配置
+    lib_mediapicker = [
+            //编译方式
+            debug  : false,
+            //版本号
+            version: "1.1.4.1",
+            //Lib库前缀
+            packeg : "com.cnlive.media",
+            //Lib库名称
+            name   : "NewMediaPicker"
+    ]
+}

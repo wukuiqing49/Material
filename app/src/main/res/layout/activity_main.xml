@@ -81,7 +81,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="拖拽" />
+                android:text="通知" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

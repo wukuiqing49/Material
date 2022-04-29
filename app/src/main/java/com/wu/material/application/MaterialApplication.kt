@@ -1,12 +1,8 @@
 package com.wu.material.application
 
-import android.util.Log
 import androidx.multidex.MultiDexApplication
-import com.alibaba.sdk.android.push.noonesdk.PushServiceFactory
-import com.alibaba.sdk.android.push.notification.BasicCustomPushNotification
 import com.baidu.mapapi.CoordType
 import com.baidu.mapapi.SDKInitializer
-import com.tencent.mmkv.MMKV
 import com.wu.material.util.MmkvUtils
 
 
@@ -25,7 +21,6 @@ class MaterialApplication : MultiDexApplication() {
         super.onCreate()
         initBaiduMap()
         initMMKV()
-
     }
 
     //初始化腾讯MMKV(数据存储)
@@ -40,7 +35,6 @@ class MaterialApplication : MultiDexApplication() {
         //自4.3.0起，百度地图SDK所有接口均支持百度坐标和国测局坐标，用此方法设置您使用的坐标类型.
         //包括BD09LL和GCJ02两种坐标，默认是BD09LL坐标。
         SDKInitializer.setCoordType(CoordType.BD09LL);
-        PushServiceFactory.getCloudPushService().
 
     }
 
