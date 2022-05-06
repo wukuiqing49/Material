@@ -2,11 +2,11 @@ package com.wu.material.activity.other
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.wu.material.R
 import com.wu.material.activity.other.bdmap.MaterialMapActivity
 import com.wu.material.activity.other.mmkv.MMKVActivity
-import kotlinx.android.synthetic.main.activity_other.*
 
 
 /**
@@ -28,11 +28,10 @@ class OtherActivity : AppCompatActivity() {
 
     private fun initView() {
 
-        bt_map.setOnClickListener {
+        findViewById<Button>(R.id.bt_map).setOnClickListener {
             startActivity(Intent(this, MaterialMapActivity::class.java));
         }
-
-        bt_mmkv.setOnClickListener {
+        findViewById<Button>(R.id.bt_mmkv).setOnClickListener {
             startActivity(Intent(this, MMKVActivity::class.java));
         }
     }

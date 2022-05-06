@@ -1,10 +1,10 @@
 package com.wu.material.activity.other.mmkv
 
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.wu.material.R
 import com.wu.material.util.MmkvUtils
-import kotlinx.android.synthetic.main.activity_other.*
 
 
 /**
@@ -20,7 +20,7 @@ class MMKVActivity:AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mmkv)
-        bt_mmkv.setOnClickListener {
+        findViewById<Button>(R.id.bt_mmkv).setOnClickListener {
             MmkvUtils.put("demo","123134")
         }
     }

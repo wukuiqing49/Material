@@ -1,7 +1,6 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'kotlin-android-extensions'
 }
 
 static def stringValue(def value) {
@@ -22,6 +21,16 @@ android {
             // 设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
             abiFilters "armeabi-v7a"
         }
+        // room 配置
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += [
+                        "room.schemaLocation":"$projectDir/schemas".toString(),
+                        "room.incremental":"true",
+                        "room.expandProjection":"true"]
+            }
+        }
+
     }
 
 
@@ -119,5 +128,11 @@ dependencies {
 //    implementation "androidx.draganddrop:draganddrop:1.0.0-beta01"
 
     implementation 'com.aliyun.ams:alicloud-android-push:3.7.5'
+
+    // room 配置
+    def room_version = "2.4.2"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    implementation("androidx.room:room-paging:2.4.0-alpha04")
 
 }

@@ -20,5 +20,11 @@
         android:layout_marginTop="5dp"
         android:text="腾讯MMKV" />
 
+    <Button
+        android:id="@+id/bt_room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="数据库ROMM" />
 
 </LinearLayout>
