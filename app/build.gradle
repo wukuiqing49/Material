@@ -14,8 +14,8 @@ android {
         applicationId "com.wu.material"
         minSdkVersion 24
         targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.2"
         vectorDrawables.useSupportLibrary = true
         ndk {
             // 设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
@@ -134,5 +134,15 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
     implementation("androidx.room:room-paging:2.4.0-alpha04")
+
+
+
+    // 处理支付等阿里系的兼容问题
+//    implementation("com.aliyun.ams:alicloud-android-utdid:1.1.5.3") {
+//        exclude group: 'com.aliyun.ams'
+//    }
+//    implementation 'com.aliyun.ams:alicloud-android-utils:1.1.6.4'
+    //阿里热修复
+    implementation 'com.aliyun.ams:alicloud-android-hotfix:3.3.5'
 
 }

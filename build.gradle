@@ -60,6 +60,10 @@ allprojects {
             url 'https://dl.bintray.com/granzon/cnliveLibs'
         }
         maven { url 'https://dl.bintray.com/umsdk/release' }
+
+        maven {
+            url "http://maven.aliyun.com/nexus/content/repositories/releases"
+        }
     }
 }
 

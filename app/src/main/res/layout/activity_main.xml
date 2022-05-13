@@ -7,15 +7,26 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:textColor="#333333"
+                android:layout_marginTop="15dp"
+                android:id="@+id/tv_sophix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="热更新初始"/>
+
             <Button
+
                 android:id="@+id/bt_motion_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="15dp"
                 android:text="MotionLayout学习" />
 
             <Button

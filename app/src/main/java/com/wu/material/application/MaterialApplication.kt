@@ -3,6 +3,7 @@ package com.wu.material.application
 import androidx.multidex.MultiDexApplication
 import com.baidu.mapapi.CoordType
 import com.baidu.mapapi.SDKInitializer
+import com.taobao.sophix.SophixManager
 import com.wu.material.util.MmkvUtils
 
 
@@ -15,12 +16,21 @@ import com.wu.material.util.MmkvUtils
  *
  */
 
-class MaterialApplication : MultiDexApplication() {
+class MaterialApplication : MultiDexApplication()  {
 
+
+    companion object{
+        var appOnline = false
+    }
     override fun onCreate() {
         super.onCreate()
         initBaiduMap()
         initMMKV()
+        //应用程序Activity前后端判断
+        registerActivityLifecycleCallbacks(ActivityLifecycle())
+        //热修复 初始化
+        SophixStubUtil.init(this@MaterialApplication, packageName)
+        SophixManager.getInstance().queryAndLoadNewPatch()
     }
 
     //初始化腾讯MMKV(数据存储)
@@ -35,7 +45,6 @@ class MaterialApplication : MultiDexApplication() {
         //自4.3.0起，百度地图SDK所有接口均支持百度坐标和国测局坐标，用此方法设置您使用的坐标类型.
         //包括BD09LL和GCJ02两种坐标，默认是BD09LL坐标。
         SDKInitializer.setCoordType(CoordType.BD09LL);
-
     }
 
 

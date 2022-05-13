@@ -52,8 +52,7 @@ class MainActivity : AppCompatActivity() {
 //            startActivity(Intent(this, DragAndDropActivity::class.java));
             NotificationUtil.initNotification(this,"1111","222")
         }
-
-
+        binding.tvSophix.text="热更新--->热更新更新了数据"
 
     }
 
