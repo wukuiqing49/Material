@@ -21,6 +21,14 @@
                 android:layout_height="wrap_content"
                 android:text="热更新初始"/>
 
+            <TextView
+                android:textColor="#333333"
+                android:layout_marginTop="15dp"
+                android:id="@+id/tv_arouter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="路由数据"/>
+
             <Button
 
                 android:id="@+id/bt_motion_layout"

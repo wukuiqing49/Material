@@ -1,11 +1,21 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
+
+
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+
 
 static def stringValue(def value) {
     return "\"${value}\""
 }
+
 android {
     compileSdkVersion = 30
     buildToolsVersion = "30.0.3"
@@ -25,11 +35,17 @@ android {
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments += [
-                        "room.schemaLocation":"$projectDir/schemas".toString(),
-                        "room.incremental":"true",
-                        "room.expandProjection":"true"]
+                        "room.schemaLocation"  : "$projectDir/schemas".toString(),
+                        "room.incremental"     : "true",
+                        "room.expandProjection": "true"]
             }
         }
+        //ARouter 配置
+//        javaCompileOptions {
+//            annotationProcessorOptions {
+//                arguments = [AROUTER_MODULE_NAME: project.getName()]
+//            }
+//        }
 
     }
 
@@ -136,7 +152,6 @@ dependencies {
     implementation("androidx.room:room-paging:2.4.0-alpha04")
 
 
-
     // 处理支付等阿里系的兼容问题
 //    implementation("com.aliyun.ams:alicloud-android-utdid:1.1.5.3") {
 //        exclude group: 'com.aliyun.ams'
@@ -144,5 +159,11 @@ dependencies {
 //    implementation 'com.aliyun.ams:alicloud-android-utils:1.1.6.4'
     //阿里热修复
     implementation 'com.aliyun.ams:alicloud-android-hotfix:3.3.5'
+    // java Arouter
+//    implementation 'com.alibaba:arouter-api:1.5.1'
+//    annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
+    // kotlin Arouter
+    implementation 'com.alibaba:arouter-api:1.5.1'
+    kapt 'com.alibaba:arouter-compiler:1.2.1'
 
 }

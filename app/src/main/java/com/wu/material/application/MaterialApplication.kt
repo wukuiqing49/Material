@@ -1,9 +1,11 @@
 package com.wu.material.application
 
 import androidx.multidex.MultiDexApplication
+import com.alibaba.android.arouter.launcher.ARouter
 import com.baidu.mapapi.CoordType
 import com.baidu.mapapi.SDKInitializer
 import com.taobao.sophix.SophixManager
+import com.wu.material.BuildConfig
 import com.wu.material.util.MmkvUtils
 
 
@@ -26,11 +28,25 @@ class MaterialApplication : MultiDexApplication()  {
         super.onCreate()
         initBaiduMap()
         initMMKV()
+        initArouter()
         //应用程序Activity前后端判断
         registerActivityLifecycleCallbacks(ActivityLifecycle())
         //热修复 初始化
         SophixStubUtil.init(this@MaterialApplication, packageName)
         SophixManager.getInstance().queryAndLoadNewPatch()
+
+    }
+
+    /**
+     * 初始化路由
+     */
+    private fun initArouter() {
+
+        if (BuildConfig.DEBUG) {           // 这两行必须写在init之前，否则这些配置在init过程中将无效
+            ARouter.openLog();     // 打印日志
+            ARouter.openDebug();   // 开启调试模式(如果在InstantRun模式下运行，必须开启调试模式！线上版本需要关闭,否则有安全风险)
+        }
+        ARouter.init(this)
     }
 
     //初始化腾讯MMKV(数据存储)

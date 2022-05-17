@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.wu.material.R
 import com.wu.material.databinding.ActivityMediaBinding
 import com.wu.material.util.MediaPlayerListener
@@ -20,6 +21,7 @@ import com.wu.material.util.MediaPlayerUtil
  *@des
  *
  */
+@Route(path = "/rv/MediaPlayerActivity")
 @RequiresApi(Build.VERSION_CODES.N)
 class MediaPlayerActivity : AppCompatActivity() {
 
