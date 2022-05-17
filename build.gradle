@@ -72,40 +72,8 @@ task clean(type: Delete) {
 }
 
 ext {
-    //androidX
-
-    androidXAppcompat = '1.0.0'
-    androidXRecyclerview = '1.0.0'
-    androidXConstraintlayout = '1.1.3'
-
-    androidX_legacy_support_v4 = '1.0.0'
-
-    glide = '4.11.0'
-    glideTransformations = '4.1.0'
-    compiler = '4.11.0'
-
-    easypermissions = '3.0.0'
-    rotatephotoview = '1.0.5'
-
-    libCnUtil = '3.1.0'
-    libCnVideo = '3.2.3'
-
-    qmui = '1.1.5'
-
-    libLargeImage = '1.0.4-androidx'
-    libBase = '1.9.9.0'
-//    libVideoQiniu = '1.0.7.2'
-
     //阿里路由框架
     arouterApiVersion = '1.5.0'
     arouterCompilerVersion = '1.2.1'
 
-    libCnUtil = '3.1.5'
-    libCnVideo = '3.3.24'
-    libCnencipher = '1.1.1'
-
-
-    //视频库
-    libVideoQiniu = '1.0.7-androidx'
-    qiniuAndroidSdk = '7.4.3'
 }
