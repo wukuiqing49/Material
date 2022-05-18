@@ -28,6 +28,8 @@ class MediaPlayerActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+       var name= intent.getStringExtra("name")
+       var uid= intent.getStringExtra("uid")
         var binding=DataBindingUtil.setContentView<ActivityMediaBinding>(this, R.layout.activity_media)
         binding.btPlay.setOnClickListener {
             playRawMp3()

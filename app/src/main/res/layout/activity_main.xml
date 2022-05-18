@@ -95,6 +95,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:text="音频播放" />
+
+            <Button
+                android:id="@+id/bt_arouter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="路由 Arouter" />
             <Button
                 android:id="@+id/bt_tz"
                 android:layout_width="wrap_content"

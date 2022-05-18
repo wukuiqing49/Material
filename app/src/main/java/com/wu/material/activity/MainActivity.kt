@@ -13,7 +13,7 @@ import com.wu.material.activity.motionlayout.MotionLayoutDemoActivity
 import com.wu.material.activity.other.OtherActivity
 import com.wu.material.activity.rv.RecyclerHomeActivityActivity
 import com.wu.material.databinding.ActivityMainBinding
-import com.wu.material.util.ArouterUtil
+import com.wu.material.util.arouter.ArouterUtil
 import com.wu.material.util.NotificationUtil
 
 class MainActivity : AppCompatActivity() {
@@ -49,10 +49,15 @@ class MainActivity : AppCompatActivity() {
         binding.btMedia.setOnClickListener {
             ArouterUtil.startMediaActivity(this)
         }
+        binding.btArouter.setOnClickListener {
+            ArouterUtil.startArouterActivity(this)
+        }
         binding.btTz.setOnClickListener {
 //            startActivity(Intent(this, DragAndDropActivity::class.java));
             NotificationUtil.initNotification(this,"1111","222")
         }
+
+
         binding.tvSophix.text="热更新--->基础数据"
         binding.tvArouter.text=    ArouterUtil.getUserName()
 

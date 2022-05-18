@@ -41,13 +41,22 @@ class MaterialApplication : MultiDexApplication()  {
      * 初始化路由
      */
     private fun initArouter() {
-
-        if (BuildConfig.DEBUG) {           // 这两行必须写在init之前，否则这些配置在init过程中将无效
-            ARouter.openLog();     // 打印日志
-            ARouter.openDebug();   // 开启调试模式(如果在InstantRun模式下运行，必须开启调试模式！线上版本需要关闭,否则有安全风险)
+        // 这两行必须写在init之前，否则这些配置在init过程中将无效
+        if (BuildConfig.DEBUG) {
+            // 打印日志
+            ARouter.openLog();
+            // 开启调试模式(如果在InstantRun模式下运行，必须开启调试模式！线上版本需要关闭,否则有安全风险)
+            ARouter.openDebug();
         }
         ARouter.init(this)
     }
+
+    override fun onTerminate() {
+        super.onTerminate()
+        //阿里router需要释放
+        ARouter.getInstance().destroy()
+    }
+
 
     //初始化腾讯MMKV(数据存储)
     private fun initMMKV() {

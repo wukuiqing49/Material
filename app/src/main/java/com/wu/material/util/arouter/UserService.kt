@@ -7,11 +7,10 @@ import com.alibaba.android.arouter.facade.template.IProvider
  *
  * @date 2022年05月17日 16:45
  *
- *@des
+ *@des  创建服务
  *
  */
 interface UserService:IProvider {
-
     fun getUid():String?
     fun getName():String?
     fun getFace():String?

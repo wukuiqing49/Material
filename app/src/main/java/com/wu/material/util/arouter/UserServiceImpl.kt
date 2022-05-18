@@ -9,9 +9,10 @@ import com.alibaba.android.arouter.facade.annotation.Route
  *
  * @date 2022年05月17日 16:46
  *
- *@des
+ *@des  实现服务
  *
  */
+// 注解
 @Route(path = "/service/UserSericice")
 class UserServiceImpl:UserService {
     override fun getUid(): String? {

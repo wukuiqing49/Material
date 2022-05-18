@@ -112,6 +112,7 @@
         <activity android:name=".activity.other.mmkv.MMKVActivity"/>
         <activity android:name=".activity.MediaPlayerActivity"/>
         <activity android:name=".activity.DragAndDropActivity"/>
+        <activity android:name=".activity.arouter.ArouterActivity"/>
     </application>
 
 </manifest>
