@@ -21,7 +21,7 @@ import com.wu.material.util.arouter.UserServiceImpl
  *@des
  *
  */
-@Route(path = "/arouter/ArouterActivity")
+@Route(path = "/route/ArouterActivity")
 class ArouterActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

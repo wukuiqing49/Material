@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.alibaba.android.arouter.launcher.ARouter
 import com.wu.material.R
 import com.wu.material.activity.constraint.ConstraintLayoutDemoActivity
 import com.wu.material.activity.lazy.LazyLoadingFragmentActivity
@@ -51,6 +52,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btArouter.setOnClickListener {
             ArouterUtil.startArouterActivity(this)
+//
+//            ARouter.getInstance().build("/route/ArouterActivity")
+//                    .navigation(this)
         }
         binding.btTz.setOnClickListener {
 //            startActivity(Intent(this, DragAndDropActivity::class.java));

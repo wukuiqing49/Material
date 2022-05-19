@@ -19,7 +19,7 @@ import com.alibaba.android.arouter.launcher.ARouter
 object ArouterUtil {
 
     fun startArouterActivity(mContext: Context) {
-        ARouter.getInstance().build("/arouter/ArouterActivity")
+        ARouter.getInstance().build("/route/ArouterActivity")
             .navigation(mContext)
     }
 
