@@ -165,5 +165,6 @@ dependencies {
     // kotlin Arouter
     implementation 'com.alibaba:arouter-api:1.5.1'
     kapt 'com.alibaba:arouter-compiler:1.2.1'
-
+    //vip 标签
+    implementation 'com.github.wukuiqing49:VipImageView:1.0.3'
 }
