@@ -113,6 +113,8 @@
         <activity android:name=".activity.MediaPlayerActivity"/>
         <activity android:name=".activity.DragAndDropActivity"/>
         <activity android:name=".activity.arouter.ArouterActivity"/>
+        <activity android:name=".activity.rv.DragActivity"/>
+        <activity android:name=".activity.rv.snap.SnapHelpActivity"/>
     </application>
 
 </manifest>

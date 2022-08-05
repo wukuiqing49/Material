@@ -12,6 +12,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.wu.material.R
+import com.wu.material.activity.rv.snap.SnapHelpActivity
 import com.wu.material.databinding.ActivityRecyclerviewBinding
 import com.wu.material.databinding.ActivityRecyclerviewHomeBinding
 
@@ -42,6 +43,12 @@ class RecyclerHomeActivityActivity : AppCompatActivity() {
         }
         binding!!.btRv5.setOnClickListener {
             startActivity(Intent(this, RecyclerTreeViewActivity::class.java));
+        }
+        binding!!.btRv6.setOnClickListener {
+            startActivity(Intent(this, DragActivity::class.java));
+        }
+        binding!!.btRv7.setOnClickListener {
+            startActivity(Intent(this, SnapHelpActivity::class.java));
         }
     }
 

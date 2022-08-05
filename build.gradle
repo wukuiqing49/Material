@@ -5,13 +5,6 @@ buildscript {
         google()
         mavenCentral()
 
-        maven {
-            url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/"
-        }
-        maven { url 'https://www.jitpack.io' }
-        maven { url 'https://maven.aliyun.com/repository/google' }
-        maven { url 'https://maven.aliyun.com/repository/central' }
-        maven { url 'https://maven.aliyun.com/repository/releases' }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.0.1"
@@ -24,46 +17,37 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
+
         mavenCentral()
-
-        maven {
-            url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/"
-        }
+        google()
         jcenter() { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
-        maven { url 'https://jitpack.io' }
-        maven { url 'https://maven.aliyun.com/repository/google' }
-        maven { url 'https://maven.aliyun.com/repository/jcenter' }
-        maven { url 'https://maven.aliyun.com/repository/central' }
-        maven { url 'http://developer.huawei.com/repo/' }
-        maven { url 'https://repo1.maven.org/maven2/' }
-
-        maven {
-            url 'http://maven.aliyun.com/nexus/content/repositories/releases/'
-        }
-        maven {
-            url 'https://developer.huawei.com/repo/'
-        }
-
-        maven {
-            url "http://android.nexus.cnlive.com/repository/cnlive-mixed/"
-            credentials { username = "developer";password = "android_2019" }
-        }
-        //------------------ 资源库配置 END------------------
-        maven {
-            url "https://jitpack.io"
-        }
-        maven {
-            url 'https://dl.bintray.com/granzon/cnlive'
-        }
-        maven {
-            url 'https://dl.bintray.com/granzon/cnliveLibs'
-        }
-        maven { url 'https://dl.bintray.com/umsdk/release' }
-
         maven {
             url "http://maven.aliyun.com/nexus/content/repositories/releases"
         }
+        maven { url 'https://jitpack.io' }
+//        maven { url 'https://maven.aliyun.com/repository/google' }
+//        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+//        maven { url 'https://maven.aliyun.com/repository/central' }
+
+//        maven {
+//            url "http://android.nexus.cnlive.com/repository/cnlive-mixed/"
+//            credentials { username = "developer";password = "android_2019" }
+//        }
+//        //------------------ 资源库配置 END------------------
+//        maven {
+//            url "https://jitpack.io"
+//        }
+//        maven {
+//            url 'https://dl.bintray.com/granzon/cnlive'
+//        }
+//        maven {
+//            url 'https://dl.bintray.com/granzon/cnliveLibs'
+//        }
+//        maven { url 'https://dl.bintray.com/umsdk/release' }
+//
+//        maven {
+//            url "http://maven.aliyun.com/nexus/content/repositories/releases"
+//        }
     }
 }
 
