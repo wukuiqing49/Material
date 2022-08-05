@@ -1,116 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <LinearLayout
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:id="@+id/ll_top"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:orientation="vertical">
 
             <TextView
-                android:textColor="#333333"
-                android:layout_marginTop="15dp"
                 android:id="@+id/tv_sophix"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="热更新初始"/>
+                android:layout_marginTop="15dp"
+                android:text="热更新初始"
+                android:textColor="#333333" />
 
             <TextView
-                android:textColor="#333333"
-                android:layout_marginTop="15dp"
                 android:id="@+id/tv_arouter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="路由数据"/>
-
-            <Button
-
-                android:id="@+id/bt_motion_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="MotionLayout学习" />
-
-            <Button
-                android:id="@+id/bt_constraint"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="ConstraintLayout学习" />
-
-            <Button
-                android:id="@+id/bt_live"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="LiveData学习" />
-
-
-            <Button
-                android:id="@+id/bt_rv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="RecyclerView 学习" />
-
-            <Button
-                android:id="@+id/bt_rv4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Kotlin 携程 和图片保存(兼容处理)" />
-
-            <Button
-                android:id="@+id/bt_rv6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Fragment 懒加载方案一" />
-
-            <Button
-                android:id="@+id/bt_rv7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Fragment 懒加载方案二" />
-
-
-
-            <Button
-                android:id="@+id/bt_rv8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="三方库使用" />
-
-            <Button
-                android:id="@+id/bt_media"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="音频播放" />
-
-            <Button
-                android:id="@+id/bt_arouter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="路由 Arouter" />
-            <Button
-                android:id="@+id/bt_tz"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="通知" />
+                android:text="路由数据"
+                android:textColor="#333333" />
 
         </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+
+        <com.wkq.flow.FlowLayout
+            android:id="@+id/fl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll_top"
+            android:background="@color/white"
+            app:flAngleSize="10"
+            app:flBackgroundColor="@color/cerulean_blue"
+            app:flMarginLeftAndRight="40"
+            app:flMarginTopAndBottom="30"
+            app:flPaddingLeftAndRight="40"
+            app:flPaddingTopAndBottom="10"
+            app:flTextColor="@color/white" />
+
+    </RelativeLayout>
 
 
 </layout>
