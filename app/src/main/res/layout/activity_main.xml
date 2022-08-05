@@ -36,7 +36,7 @@
         <com.wkq.flow.FlowLayout
             android:id="@+id/fl"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/ll_top"
             android:background="@color/white"
             app:flAngleSize="10"
